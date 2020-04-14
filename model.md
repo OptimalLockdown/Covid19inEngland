@@ -12,6 +12,6 @@ We consider 5 different age groups, and 7 different states; the transition patte
 
 The model we use is the following: 
 
-![Equations](https://github.com/LoryPack/COVID19-epidemics-forecast-England/raw/master/img/equations.pdf)
+![Equations](https://raw.githubusercontent.com/LoryPack/COVID19-epidemics-forecast-England/master/img/equations.png?)
 
 
