@@ -2,13 +2,11 @@
 
 We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
 
-![SEIRD model](./img/SEIRD.pdf)
-
 ![SEIRD model](https://raw.githubusercontent.com/LoryPack/COVID19-epidemics-forecast-England/master/img/SEIRD.png?token=AIT3WHE77BMEFWECRDZO36K6T33XW)
 
 The model we use is the following: 
 {% raw %}  
-$$\frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \quad I_j^{SC} = I_j^{SC1} + I_j^{SC2}$$
+$$ \frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \quad I_j^{SC} = I_j^{SC1} + I_j^{SC2}$$
 {% endraw %}
 
 {% raw %}  
