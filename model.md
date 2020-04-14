@@ -4,6 +4,9 @@ title: SEIRD model and inference scheme
 usemathjax: true
 ---
 
+[BACK](./)
+
+
 # SEIRD model:
 
 
