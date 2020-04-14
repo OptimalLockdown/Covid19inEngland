@@ -1,3 +1,8 @@
+---
+layout: default
+title: SEIRD model and inference scheme
+---
+
 ## SEIRD model: 
 
 We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
