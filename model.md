@@ -2,7 +2,7 @@
 
 We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
 
-
+![SEIRD model](img/SEIRD.pdf)
 
 
 The model we use is the following: 
