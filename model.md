@@ -3,11 +3,6 @@ layout: default
 title: SEIRD model and inference scheme
 usemathjax: true
 ---
-{% raw %}
-<script type="text/javascript" async
- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
-{% end raw %}
 
 ## SEIRD model: 
 
@@ -15,7 +10,6 @@ We consider 5 different age groups, and 7 different states; the transition patte
 
 ![SEIRD model](https://raw.githubusercontent.com/LoryPack/COVID19-epidemics-forecast-England/master/img/SEIRD.png?token=AIT3WHE77BMEFWECRDZO36K6T33XW)
 
-ciaone
 The model we use is the following: 
 
 $$
