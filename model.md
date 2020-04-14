@@ -9,6 +9,9 @@ The model we use is the following:
 $$ \frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \quad I_j^{SC} = I_j^{SC1} + I_j^{SC2}$$
 {% endraw %}
 
+second: 
+$$ \frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \quad I_j^{SC} = I_j^{SC1} + I_j^{SC2}$$
+
 {% raw %}  
 \begin{align*}
 \frac{dS_i}{dt} & = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \quad I_j^{SC} = I_j^{SC1} + I_j^{SC2}\\[8pt]
