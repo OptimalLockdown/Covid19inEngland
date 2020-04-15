@@ -10,30 +10,11 @@ The aim of this project is to predict daily evolution of COVID-19 pandemic in th
 
 .. toctree::
    :maxdepth: 2
-   :caption: Prediction
+   :titlesonly:
+   :includehidden:
 
    Prediction
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Epidemic Models 
-
    Model
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Public Data Sources
-
    Data
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Inference: ABC
-
    Inference
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Q&A
-
    FAQ

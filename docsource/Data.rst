@@ -1,6 +1,6 @@
 .. _Data:
 
-Details of Data
+Public Data Sources
 ==============================
 
 The following data is used in this project: 

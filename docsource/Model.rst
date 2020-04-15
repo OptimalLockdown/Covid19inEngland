@@ -1,7 +1,10 @@
 .. _Model:`
 
-age-structured SEIRD
+Epidemic Model
 ==============================
+
+age-structured SEIRD
+~~~~~~~~~~~~~~~~~~~~
 
 Presently, we are using a compartmental model, which splits whole of the UK population into 7 compartments representing different possible states (Susceptible, Exposed, asymptomatic and symptomatic Infected subclinical not needing medical attention, Infected clinical needing medical attention, Recovered and Deceased). Further each of the states are structured along 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`. 
 

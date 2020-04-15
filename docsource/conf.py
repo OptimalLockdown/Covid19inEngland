@@ -139,12 +139,14 @@ html_theme = 'alabaster'
 html_sidebars = {
     '**': [
         'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html',
+	'navigation.html',
+	'relations.html',
+	'searchbox.html',
     ]
 }
+
+
+#'donate.html',
 #import sphinx_rtd_theme
 #html_theme = 'sphinx_rtd_theme'
 #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
