@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Details of Data &#8212; covid  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/contentui.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Likelihood-free inference" href="Inference.html" />
+    <link rel="prev" title="Epidemic Models" href="Model.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="details-of-data">
+<span id="data"></span><h1>Details of Data<a class="headerlink" href="#details-of-data" title="Permalink to this headline">¶</a></h1>
+<p>The following data is used in this project:</p>
+<div class="content-tabs docutils container">
+<div class="tab-content docutils container" id="tab-tab1">
+<p class="tab-title">NHS England</p>
+<ul class="simple">
+<li><p>[NHS England](<a class="reference external" href="https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/">https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/</a>) reports daily deaths with age group in 20-years bands.</p></li>
+<li><p>[UK Government website](<a class="reference external" href="https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases">https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases</a>) reports daily overall number positive and deaths, with no age information but with geographical location; in this first time, we neglected the location information, but we plan to use that in the future.</p></li>
+</ul>
+</div>
+<div class="tab-content docutils container" id="tab-tab2">
+<p class="tab-title">Contact Matrix</p>
+<p>[Prem et al. (2017)](<a class="reference external" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697</a>) estimated contact matrices describing the frequency of contact between people of different age groups; they consider here 5-year bands, which we aggregated in order to match the data provided by NHS England.</p>
+</div>
+<div class="tab-content docutils container" id="tab-tab3">
+<p class="tab-title">Restrictions</p>
+<p>In order to understand the impact of the restrictive measures implemented in the UK (whose timeline is reported [here](<a class="reference external" href="https://bfpg.co.uk/2020/04/covid-19-timeline/">https://bfpg.co.uk/2020/04/covid-19-timeline/</a>)), we combined declarations from government officials (for instance regarding eldelry self-isolating, or schools closure) and        [Google data regarding mobility](<a class="reference external" href="https://www.google.com/covid19/mobility/">https://www.google.com/covid19/mobility/</a>), which was transformed to a machine readable format using [this github repository](<a class="reference external" href="https://github.com/pastelsky/covid-19-mobility-tracker">https://github.com/pastelsky/covid-19-mobility-tracker</a>)</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">covid</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Prediction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Prediction.html">Prediction (updated daily)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Epidemic Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Model.html">Epidemic Models</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Public Data Sources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Details of Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Inference: ABC</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Inference.html">Likelihood-free inference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Q&amp;A</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions and Answers (for public and media)</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Model.html" title="previous chapter">Epidemic Models</a></li>
+      <li>Next: <a href="Inference.html" title="next chapter">Likelihood-free inference</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Author.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Data.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
