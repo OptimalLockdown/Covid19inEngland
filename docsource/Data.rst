@@ -25,4 +25,4 @@ The following data is used in this project:
     .. tab-container:: tab3
         :title: Restrictions
 
-        In order to understand the impact of the restrictive measures implemented in the UK (whose timeline is reported [here](https://bfpg.co.uk/2020/04/covid-19-timeline/)), we combined declarations from government officials (for instance regarding eldelry self-isolating, or schools closure) and        [Google data regarding mobility](https://www.google.com/covid19/mobility/), which was transformed to a machine readable format using [this github repository](https://github.com/pastelsky/covid-19-mobility-tracker)
+        In order to understand the impact of the restrictive measures implemented in the UK (whose timeline is reported `here <https://bfpg.co.uk/2020/04/covid-19-timeline/>`_), we combined declarations from government officials (e.g. self-isolation of eldelry or schools closure) and        `Google mobility data <https://www.google.com/covid19/mobility/>`_, which was transformed to a machine readable format using `this github repository <https://github.com/pastelsky/covid-19-mobility-tracker>`_

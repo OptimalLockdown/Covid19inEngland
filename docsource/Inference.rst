@@ -11,7 +11,7 @@ Likelihood-free inference
         As the likelihood of parameters in the proposed epdiemic model is intractable, we use a likelihood-free inference scheme approximate Bayesian Computation (ABC) to calibrate the epidemic model based on daily number of confirmed infected individuals and deceased one in the UK. ABC allows us to fix a prior range for the parameters and uncertainty on them (defined by prior distribution :math:`\pi(\theta)`), and to obtain an uncertainty range in the prediction.  This inference scheme essentially works by looking for a value of the parameters which best approximates the observations. The fundamental ABC rejection sampling scheme iterates the following steps: 
         
         - Draw :math:`\theta` from the prior :math:`\pi(\theta)`.
-        - Simulate a synthetic dataset :math:`\mathbf{x}'^{sim}` from the simulator-based model :math:`\mathcal{M}(\theta)`.
+        - Simulate a synthetic dataset :math:`\mathbf{x}^{sim}` from the simulator-based model :math:`\mathcal{M}(\theta)`.
         -  Accept the parameter value :math:`\theta` if :math:`\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}) < \epsilon`. Otherwise, reject :math:`\theta`.
         
         .. image:: img/ABC_rejection.png

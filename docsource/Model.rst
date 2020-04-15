@@ -1,11 +1,8 @@
 .. _Model:`
 
-Epidemic Model
+age-structured SEIRD
 ==============================
 
-
-age-structured SEIRD
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Presently, we are using a compartmental model, which splits whole of the UK population into 7 compartments representing different possible states (Susceptible, Exposed, asymptomatic and symptomatic Infected subclinical not needing medical attention, Infected clinical needing medical attention, Recovered and Deceased). Further each of the states are structured along 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`. 
 
 
@@ -20,7 +17,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
         
         .. image:: img/SEIRD.png
         
-        which is further  influenced by contact matrix :math:`C` whose entries are the expected numbers of contacts made between different age groups in the UK as in [8]. Further we will consider: 
+        which is further  influenced by contact matrix :math:`C` whose entries are the frequencies of contacts made between different age groups in the UK as in `Prem et al. (2017) <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697>`_. Further we will consider: 
         
         .. centered:: :math:`C=\alpha_{home}C_{home}+\alpha_{work}C_{work}+\alpha_{school}C_{school}+\alpha_{other}C_{other}`
         
@@ -42,7 +39,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
     .. tab-container:: tab3
         :title: ODEs
         
-        The tramsmission dynamics of the model is defined by the following ordinary differential equations (ODEs): 
+        The tramsmission dynamics of the model is defined by the following ordinary differential equations (ODEs) where :math:`C` is the contact matrix representing the frequency of contacts between different age groups: 
         
         :math:`\frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \ I_j^{SC} = I_j^{SC1} + I_j^{SC2}`
 
