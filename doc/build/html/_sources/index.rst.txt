@@ -16,7 +16,7 @@ We aim of this project is to shed light on how models to predict the evolution o
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modeling & Inference
+   :caption: Epidemic Models 
 
    Model
 

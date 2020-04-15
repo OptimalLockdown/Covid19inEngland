@@ -67,10 +67,5 @@ Metapopulation SEIRD Models
 
     .. tab-container:: tab3
         :title: Equations
+        
         ccccc
-
-Inference
-==============================
-
-        We use Approximate Bayesian Computation as an inference scheme to fit the parameter values. This allows us to fix a prior range for the parameters, and to obtain an uncertainty range in the prediction.      
-        This inference scheme essentially works by looking for a value of the parameters which best approximates the observations.
