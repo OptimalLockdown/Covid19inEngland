@@ -1,5 +1,0 @@
-theme: jekyll-theme-slate
-title: Forecasting the COVID-19 epidemics in England with an SEIRD model
-markdown: kramdown
-kramdown:
-    math_engine: mathjax

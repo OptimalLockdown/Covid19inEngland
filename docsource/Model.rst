@@ -23,7 +23,7 @@ SEIRD Model
         
         We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
         
-        .. image:: SEIRD.png
+        .. image:: img/SEIRD.png
 
     .. tab-container:: tab2
         :title: Parameters
@@ -46,7 +46,7 @@ SEIRD Model
         Therefore, the equations defining the model are the following: 
 
 
-        .. image:: equations.png
+        .. image:: img/equations.png
         
         
 Metapopulation SEIRD Models
