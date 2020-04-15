@@ -3,7 +3,7 @@
 Likelihood-free inference
 =========================================
 
-.. content-tabs::
+.. content-tabs::~
 
     .. tab-container:: tab1
         :title: Approximate Bayesian computation

@@ -1,6 +1,6 @@
 .. _FAQ:
 
-Questions and Answers (for public and media)
+Questions and Answers (for the public and media)
 ==============================================
 
 1. What is this project?
