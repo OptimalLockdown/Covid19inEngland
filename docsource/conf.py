@@ -69,9 +69,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'covid'
-copyright = '2017, Author'
-author = 'Author'
+project = 'COVIDinUK'
+copyright = '2020, Lorenzo Pacchiardi and Ritabrata Dutta'
+author = 'Lorenzo Pacchiardi and Ritabrata Dutta'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
