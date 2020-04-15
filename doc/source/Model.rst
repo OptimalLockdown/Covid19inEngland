@@ -1,15 +1,19 @@
 .. _Model:
 
-Details of Model
+Epidemic Models
 ==============================
+
+
+SEIRD Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        We are using a compartmental model, which splits the population into different _compartments_, representing different possible states (Susceptible, Exposed, Infected, Recovered and Deceased). The evolution over time is represented by some equations which assume the population is well mixed. 
+
 
 .. content-tabs::
 
     .. tab-container:: tab1
-        :title: SEIRD Model
-
-        We are using a compartmental model, which splits the population into different _compartments_, representing different possible states (Susceptible, Exposed, Infected, Recovered and Deceased). The evolution over time is represented by some equations which assume the population is well mixed. 
-
+        :title: Description
         
         The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people 
         are admitted into hospital. We assume that thereafter, they are 
@@ -20,7 +24,6 @@ Details of Model
         We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
         
         .. image:: SEIRD.png
-
 
     .. tab-container:: tab2
         :title: Parameters
@@ -45,8 +48,29 @@ Details of Model
 
         .. image:: equations.png
         
-    .. tab-container:: tab4
-        :title: Inference
         
+Metapopulation SEIRD Models
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. content-tabs::
+
+    .. tab-container:: tab1
+        :title: Description
+
+        aaaaa
+
+
+    .. tab-container:: tab2
+        :title: Parameters
+
+        bbbb
+
+    .. tab-container:: tab3
+        :title: Equations
+        ccccc
+
+Inference
+==============================
+
         We use Approximate Bayesian Computation as an inference scheme to fit the parameter values. This allows us to fix a prior range for the parameters, and to obtain an uncertainty range in the prediction.      
         This inference scheme essentially works by looking for a value of the parameters which best approximates the observations.

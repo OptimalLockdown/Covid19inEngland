@@ -10,21 +10,27 @@ We aim of this project is to shed light on how models to predict the evolution o
 
 .. toctree::
    :maxdepth: 2
-   :caption: Model
+   :caption: Prediction
+
+   Prediction
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Modeling & Inference
 
    Model
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data
+   :caption: Public Data Sources
 
    Data
 
 .. toctree::
    :maxdepth: 2
-   :caption: Prediction
+   :caption: Inference: ABC
 
-   Prediction
+   Inference
 
 .. toctree::
    :maxdepth: 2

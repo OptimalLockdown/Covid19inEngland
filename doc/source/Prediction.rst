@@ -1,6 +1,6 @@
 .. _Prediction:
 
-Prediction
+Prediction (updated daily)
 ==================
 
 .. content-tabs::
@@ -15,3 +15,4 @@ Prediction
 
         aaaa
 
+For more details please check: :ref:`Epidemic models <Model>`, :ref:`approximate Bayesian computation <Inference>` and :ref:`Data sources <Data>`.
