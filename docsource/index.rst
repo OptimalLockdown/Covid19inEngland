@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-COVID-19 in UK!
+COVID-19 in UK
 ===============
-We aim of this project is to shed light on how models to predict the evolution of an epidemics work, applied specifically to the COVID-19 epidemics in England. 
+The aim of this project is to predict daily evolution of COVID-19 pandemic in the UK to help policy makers and create a public discourse about transparent science, based on cutting age epidemic models calibrated on daily number of infected and deaths (age-structured). 
        
 
 .. toctree::

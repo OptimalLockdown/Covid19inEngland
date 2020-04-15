@@ -1,13 +1,12 @@
-.. _Model:
+.. _Model:`
 
-Epidemic Models
+Epidemic Model
 ==============================
 
 
-SEIRD Model
+age-structured SEIRD
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-        We are using a compartmental model, which splits the population into different _compartments_, representing different possible states (Susceptible, Exposed, Infected, Recovered and Deceased). The evolution over time is represented by some equations which assume the population is well mixed. 
+Presently, we are using a compartmental model, which splits whole of the UK population into 7 compartments representing different possible states (Susceptible, Exposed, asymptomatic and symptomatic Infected subclinical not needing medical attention, Infected clinical needing medical attention, Recovered and Deceased). Further each of the states are structured along 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`. 
 
 
 .. content-tabs::
@@ -15,57 +14,48 @@ SEIRD Model
     .. tab-container:: tab1
         :title: Description
         
-        The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people 
-        are admitted into hospital. We assume that thereafter, they are 
-         isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients 
-        spend some time in the :math:`I^{SC}` one, and after that some of them will go directly to :math:`R`, and some to :math:`I^C`. From :math:`I^C`, 
-        they can either decease (going into the :math:`D` state) or recover (to :math:`R`). Essentially, this means that the subclinical state is splitted in two.
+        The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people are admitted into hospital. We assume that thereafter, they are isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients spend some time in the :math:`I^{SC}` one, and after that some of them will go directly to :math:`R`, and some to :math:`I^C`. From :math:`I^C`, they can either decease (going into the :math:`D` state) or recover (to :math:`R`). Essentially, this means that the subclinical state is splitted in two. (Check explanation!)
         
-        We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image: 
+        The transmission dynamics can be visualized in the following image, 
         
         .. image:: img/SEIRD.png
+        
+        which is further  influenced by contact matrix :math:`C` whose entries are the expected numbers of contacts made between different age groups in the UK as in [8]. Further we will consider: 
+        
+        .. centered:: :math:`C=\alpha_{home}C_{home}+\alpha_{work}C_{work}+\alpha_{school}C_{school}+\alpha_{other}C_{other}`
+        
+        where :math:`C_{work}` is the contact matrix at the workplace and the values of :math:`0 \leq \alpha \leq 1`. We can reflect effects of lockdown strategies through the values of :math:`\alpha` (:math:`\alpha_{school}=0` means schools are closed). Presently, we choose the values of different :math:`\alpha` on different days based on `Google mobility data <https://www.google.com/covid19/mobility/>`_ .
 
     .. tab-container:: tab2
         :title: Parameters
         
-        The parameters are therefore the following: 
+        The parameters of the considered model are following: 
         
         - :math:`\beta` transmission rate
         - :math:`\kappa` daily probability of exposed individual becoming infectious
         - :math:`\gamma_{C}` rate of going from from :math:`I_{SC1}` tp :math:`I_C`
         - :math:`\gamma_{R}` recovery rate (from both :math:`I_C` and :math:`I_{SC2}`)
         - :math:`\nu` death rate from :math:`I_{C}`
-        - :math:`\rho_i`'s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is 
-        parametrized by a logistic transformation with parameters :math:`x_0` and :math:`\phi`.
+        - :math:`\rho_i`'s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters :math:`x_0` and :math:`\phi`.
         
-        Finally, :math:`C` represents the contact matrix between age groups, with :math:`N_j` representing instead the number of people in each age group. 
 
     .. tab-container:: tab3
-        :title: Equations
+        :title: ODEs
         
-        Therefore, the equations defining the model are the following: 
-
-
-        .. image:: img/equations.png
+        The tramsmission dynamics of the model is defined by the following ordinary differential equations (ODEs): 
         
+        :math:`\frac{dS_i}{dt} = - \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}, \ I_j^{SC} = I_j^{SC1} + I_j^{SC2}`
+
+        :math:`\frac{dE_i}{dt} = \beta {S_i} \sum_j C_{i,j} \frac{I^{SC}_j}{N_j}  - \kappa  E_i`
+
+        :math:`\frac{dI^{SC1}_i}{dt} = \rho_i \kappa E_i - \gamma_{C}   I_i^{SC1}`
+
+        :math:`\frac{dI^{SC2}_i}{dt} = (1-\rho_i) \kappa E_i - \gamma_{R}   I_i^{SC2}`
+
+        :math:`\frac{dI^C_i}{dt} =  \gamma_{C} I_i^{SC1} - \gamma_R   I_i^C -\nu I_i^C`
+
+        :math:`\frac{dR_i}{dt} = \gamma_{R}   I_i^{SC} + \gamma_R I_i^{SC2}`
+
+        :math:`\frac{dD_i}{dt} =  \nu I_i^C`
+
         
-Metapopulation SEIRD Models
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. content-tabs::
-
-    .. tab-container:: tab1
-        :title: Description
-
-        aaaaa
-
-
-    .. tab-container:: tab2
-        :title: Parameters
-
-        bbbb
-
-    .. tab-container:: tab3
-        :title: Equations
-        
-        ccccc
