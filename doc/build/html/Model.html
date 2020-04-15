@@ -1,21 +1,20 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Epidemic Models &#8212; covid  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/contentui.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/contentui.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Details of Data" href="Data.html" />
@@ -41,14 +40,16 @@
 <div class="section" id="seird-model">
 <h2>SEIRD Model<a class="headerlink" href="#seird-model" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>We are using a compartmental model, which splits the population into different _compartments_, representing different possible states (Susceptible, Exposed, Infected, Recovered and Deceased). The evolution over time is represented by some equations which assume the population is well mixed.</div></blockquote>
+<div><p>We are using a compartmental model, which splits the population into different _compartments_, representing different possible states (Susceptible, Exposed, Infected, Recovered and Deceased). The evolution over time is represented by some equations which assume the population is well mixed.</p>
+</div></blockquote>
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
 <p class="tab-title">Description</p>
 <p>The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people
 are admitted into hospital. We assume that thereafter, they are</p>
 <blockquote>
-<div>isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients</div></blockquote>
+<div><p>isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients</p>
+</div></blockquote>
 <p>spend some time in the <span class="math notranslate nohighlight">\(I^{SC}\)</span> one, and after that some of them will go directly to <span class="math notranslate nohighlight">\(R\)</span>, and some to <span class="math notranslate nohighlight">\(I^C\)</span>. From <span class="math notranslate nohighlight">\(I^C\)</span>,
 they can either decease (going into the <span class="math notranslate nohighlight">\(D\)</span> state) or recover (to <span class="math notranslate nohighlight">\(R\)</span>). Essentially, this means that the subclinical state is splitted in two.</p>
 <p>We consider 5 different age groups, and 7 different states; the transition pattern can be seen in the following image:</p>
@@ -58,12 +59,12 @@ they can either decease (going into the <span class="math notranslate nohighligh
 <p class="tab-title">Parameters</p>
 <p>The parameters are therefore the following:</p>
 <ul class="simple">
-<li><span class="math notranslate nohighlight">\(\beta\)</span> transmission rate</li>
-<li><span class="math notranslate nohighlight">\(\kappa\)</span> daily probability of exposed individual becoming infectious</li>
-<li><span class="math notranslate nohighlight">\(\gamma_{C}\)</span> rate of going from from <span class="math notranslate nohighlight">\(I_{SC1}\)</span> tp <span class="math notranslate nohighlight">\(I_C\)</span></li>
-<li><span class="math notranslate nohighlight">\(\gamma_{R}\)</span> recovery rate (from both <span class="math notranslate nohighlight">\(I_C\)</span> and <span class="math notranslate nohighlight">\(I_{SC2}\)</span>)</li>
-<li><span class="math notranslate nohighlight">\(\nu\)</span> death rate from <span class="math notranslate nohighlight">\(I_{C}\)</span></li>
-<li><span class="math notranslate nohighlight">\(\rho_i\)</span>‘s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is</li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> transmission rate</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa\)</span> daily probability of exposed individual becoming infectious</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_{C}\)</span> rate of going from from <span class="math notranslate nohighlight">\(I_{SC1}\)</span> tp <span class="math notranslate nohighlight">\(I_C\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_{R}\)</span> recovery rate (from both <span class="math notranslate nohighlight">\(I_C\)</span> and <span class="math notranslate nohighlight">\(I_{SC2}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span> death rate from <span class="math notranslate nohighlight">\(I_{C}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_i\)</span>’s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is</p></li>
 </ul>
 <p>parametrized by a logistic transformation with parameters <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
 <p>Finally, <span class="math notranslate nohighlight">\(C\)</span> represents the contact matrix between age groups, with <span class="math notranslate nohighlight">\(N_j\)</span> representing instead the number of people in each age group.</p>
@@ -131,9 +132,9 @@ they can either decease (going into the <span class="math notranslate nohighligh
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Inference.html">Likelihood-free inference</a></li>
 </ul>
-<p class="caption"><span class="caption-text">F&amp;Q</span></p>
+<p class="caption"><span class="caption-text">Q&amp;A</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions and Answers (for public and media)</a></li>
 </ul>
 
 <div class="relations">
@@ -146,17 +147,15 @@ they can either decease (going into the <span class="math notranslate nohighligh
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -173,7 +172,7 @@ they can either decease (going into the <span class="math notranslate nohighligh
       &copy;2017, Author.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
