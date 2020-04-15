@@ -1,5 +1,5 @@
-# COVID19-epidemics-forecast-England
-
+COVID19-epidemics-forecast-England
+==================================
 
 We will publish here a work-in-progress version of an SEIRD model, fitted on data from England. 
 
@@ -7,7 +7,8 @@ We will publish here a work-in-progress version of an SEIRD model, fitted on dat
 The website is available at:  https://lorypack.github.io/COVID19-epidemics-forecast-England/
 
 
-# How to update this folder: 
+How to update this folder: 
+==========================
 
 Source files for the documentation are in the `docsource` folder.
 
