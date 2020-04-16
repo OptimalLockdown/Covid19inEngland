@@ -22,10 +22,10 @@ The following data is used in this project:
             .. image:: img/C_UK.png
                :width: 13000
 
-        As the NHS governement dataset consider 20-year bands, we aggregated the contact matrices provided by Prem et al. (2017) in order to match that.
+        As the NHS governement dataset consider 20-year bands, we aggregated the contact matrices provided by Prem et al. (2017) in order to match that. Please check our :ref:`Epidemic model <Model>` to know more about how the contact matrix is used for our modeling of transmission dynamics. 
 
     .. tab-container:: tab3
         :title: Google mobility data
 
-        In order to understand the impact of the restrictive measures implemented in the UK (whose timeline is reported `here <https://bfpg.co.uk/2020/04/covid-19-timeline/>`_), we combined declarations from government officials (e.g. schools closure) and `the change in mobility of the UK population reported by their Android devices <https://www.google.com/covid19/mobility/>`_, which was transformed to a machine readable format using the code available at `this github repository <https://github.com/pastelsky/covid-19-mobility-tracker>`_
+        In order to understand the impact of the restrictive measures implemented in the UK (whose timeline is reported `here <https://bfpg.co.uk/2020/04/covid-19-timeline/>`_), we combined declarations from government officials (e.g. schools closure) and `the change in mobility of the UK population reported by their Android devices <https://www.google.com/covid19/mobility/>`_, which was transformed to a machine readable format using the code available at `this github repository <https://github.com/pastelsky/covid-19-mobility-tracker>`_. Please check our :ref:`Epidemic model <Model>` to know more about how the mobility data is used in our model to reflect the effects of the lockdown. 
 

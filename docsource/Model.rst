@@ -6,7 +6,7 @@ Epidemic Model
 age-structured :math:`SEI^3RD`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Presently, we are using a compartmental model, which splits whole of the UK population into 7 compartments representing different possible states (Susceptible (:math:`S`), Exposed (:math:`E`), asymptomatic and symptomatic Infected subclinical (:math:`I_{SC1}` and :math:`I_{SC2}`) not needing medical attention, Infected clinical needing medical attention (:math:`I_{C}`), Recovered (:math:`R`) and Deceased (:math:`D`)). Further each of the states are structured along 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`, hence :math:`E_i` stands for the exposed population at the :math:`i`-th age group.
+Presently, we are using a compartmental model, which splits whole of the UK population into 7 compartments representing different possible states (Susceptible (:math:`S`), Exposed (:math:`E`) but not infectious, asymptomatic and symptomatic Infected subclinical (:math:`I_{SC1}` and :math:`I_{SC2}`) not needing medical attention, Infected clinical needing medical attention (:math:`I_{C}`), Recovered (:math:`R`) and Deceased (:math:`D`)). Further each of the states are structured along 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`, hence :math:`E_i` stands for the exposed population at the :math:`i`-th age group.
 
 
 .. content-tabs::
@@ -14,12 +14,8 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
     .. tab-container:: tab1
         :title: Description
         
-        The model we consider is inspired by what is happening in UK, where the patients are tested only when they have come to the hospital with symptoms. Afterwards, they are isolated and hence are not able to spread the infection. To reflect this scenario, we assume that after the exposed state, all patients will be sub-clinical :math:`I^{SC}` for a while, and after that some of them will recover (go to :math:`R`) and others will need clinical help (go to :math:`I^C`).
 
-        More in detail, the model works as follows: the population starts in the :math:`S` state (except for some individuals, who are seeding the infection). Then, once an individual in :math:`S` gets in contact with an infected one, it will go to the exposed state :math:`E`; this step happens with probability :math:`\beta` for each contact; note that in this state individuals are not yet infectious. After some incubation time, the individuals become Infected subclinical (:math:`I^{SC}`), in which they are capable of infecting other people; even if all people in this compartment act equally, we split the population in two categories: the ones which will directly recover (:math:`I_{SC2}`) and the ones that instead will need clinical help (:math:`I_{SC1}`). The split happens with an age-dependent probability :math:`\rho_i`.
-        Once in the :math:`I_{SC2}` state, people will recover after some time, and their infection is not recorder by the authorities. Instead, people in :math:`I_{SC1}` will go to hospital, therefore moving to the :math:`I_{C}` state, and they are registered. From this state, they will either recover :math:`R` or decease :math:`D`; we model this transition with two independent processes with a certain rate.
-
-        The transmission dynamics can be visualized ad follows:
+        Starting with the whole population being in the :math:`S` state (except for some individuals, who are seeding the infection), any susceptible individual becomes exposed (:math:`E`) with probability :math:`\beta` for each contact with an infected one. Next our model considers what is happening in the UK, where the patients are tested only when they have come to the hospital with symptoms. Afterwards, they are isolated and hence are not able to spread the infection. To reflect this scenario, we assume that after the exposed state, all patients after some incubation period will become sub-clinical :math:`I^{SC}` in which they are infectious. After that some of them will recover (go to :math:`R`) and others will need clinical help (go to :math:`I^C`), reflected in a split of two categories: the ones recover (:math:`I_{SC2}`) and the ones need clinical help (:math:`I_{SC1}`). The split happens with an age-dependent probability :math:`\rho_i`. People in :math:`I_{SC1}` will go to hospital, therefore moving to the :math:`I_{C}` state and will be counted as COVID positive. From this state, they will either recover :math:`R` or decease :math:`D` correspondingly with rates :math:`\gamma_{R}` and :math:`\nu`. The transmission dynamics can be visualized ad follows:
 
         .. image:: img/SEIRD.png
 
@@ -40,9 +36,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
         :math:`\frac{dD_i}{dt} =  \nu I_i^C`
 
 
-    where :math:`C` is the contact matrix representing the frequency of contacts between different age groups as in `Prem et al. (2017) <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697>`_.
-
-        Further we will consider the contact matrix to be composed of four different contributions, corresponding to contact happening respectively in home, workplace, school and other locations:
+        where :math:`C` is the contact matrix representing the frequency of contacts between different age groups as in `Prem et al. (2017) <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697>`_. Further we will consider the contact matrix to be composed of four different contributions, corresponding to contact happening respectively in home, workplace, school and other locations:
         
         .. centered:: :math:`C=\alpha_{home}C_{home}+\alpha_{work}C_{work}+\alpha_{school}C_{school}+\alpha_{other}C_{other}`
         
