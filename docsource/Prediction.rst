@@ -3,69 +3,70 @@
 Predictions for the UK (updated daily)
 ================================================
 
-Add predictions, results and interpretation.
-
-
-
-Multistage model, with which we predict the number of deceased and people who will tested clinical in England.
-
-**Note**: the predictions assume that the conditions in England remain the following, ie:
- - Tested people are composed mostly of the ones which are admitted into hospital
- - Restrictive measures as of the 9th April will be kept in place for the prediction horizon
- - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
-
-
-Total number of confirmed cases
+Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prediction of the total number of infected people and the total number of infected people who needed hospitalization. 
 
-We report here a prediction for the total number of confirmed cases in the next 30 days. This is the sum over all age groups
+.. content-tabs::
 
-IMAGE
+    .. tab-container:: tab1
+        :title: Total infected
+        
+        DPD_image (Add image and a line about, true number, projected number and uncertainty)
 
-
-
-
-
-
-
-Deceased according to age group
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-Next, we forecast the number of deceased for each of the 5 considered age groups.
-
-IMAGES
+    .. tab-container:: tab2
+        :title: Infected & Hospitalized
+        
+        TD_image (Add image and a line about, true number, projected number and uncertainty)
 
 
+Number of deaths
+~~~~~~~~~~~~~~~~
+Prediction of the number of death per day, total number of deaths and deaths in the 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`.
+
+.. content-tabs::
+
+    .. tab-container:: tab1
+        :title: Deaths per day 
+        
+        DPD_image (Add image and a line about, true number, projected number and uncertainty)
+
+    .. tab-container:: tab2
+        :title: Total deaths
+        
+        TD_image (Add image and a line about, true number, projected number and uncertainty)
+
+    .. tab-container:: tab3
+        :title: Deaths per age-groups
+        
+        DPAG_image (Add image and a line about, true number, projected number and uncertainty)
 
 
-
-Estimates of age-specific transition probabilities
+Age-specific probabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+From our model, we estimate two age-dependent probabilities of (a) needing hospitalization when infected and (b) death.
 
-Two different age-specific probabilities are presenti in our model: first, the probability of needing clinical assistance, which we denote by :math:`\rho`, and then the probability of deceasing, conditioned on the fact that you need clinical assistance, which we denote as :math:`\rho'`.
+.. content-tabs::
 
-We can estimate these age-dependent transition probabilities.
+    .. tab-container:: tab1
+        :title: Need of hospitalization 
+        
+        DPD_image (Add image and a line about, true number, projected number and uncertainty)
+
+    .. tab-container:: tab2
+        :title: Death
+        
+        TD_image (Add image and a line about, true number, projected number and uncertainty)
 
 
-
-
-Parameter estimation: :math:`R_0` evolution during the epidemics
+Evolution of :math:`R_0` during the pandemic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 From our estimate of the parameters, we can estimate :math:`R_0`, ie the basic reproduction number, for this pandemic.
 
 
-
-
-
-
-
-
-
-
-
-
-
+**Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
+ - Tested people are composed mostly of the ones which are admitted into hospital
+ - Restrictive measures as of the 9th April will be kept in place for the prediction horizon
+ - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
 
 For more details please check :ref:`Epidemic model <Model>`, :ref:`approximate Bayesian computation <Inference>` and :ref:`Data sources <Data>`.
