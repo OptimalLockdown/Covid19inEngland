@@ -22,12 +22,12 @@ Likelihood-free inference
 
         .. centered:: :math:`p_{\mathbf{d}, \epsilon}(\mathbf{x}^{obs}|\theta) = \int p(\mathbf{x}^{sim}|\theta) \mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}))  d\mathbf{x}^{sim}` 
         
-        proportional to :math:`P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\epsilon)`. In general, :math:`\mathbb{K}_{\epsilon}(\cdot)` needs to be a probability density function with a large concentration of mass near 0, in which the parameter :math:`\epsilon` denotes the amount of concentration (the smaller :math:`\epsilon`, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when :math:`\epsilon \to 0`. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High performance computing in `ABCpy <https://github.com/eth-cscs/abcpy/tree/master/abcpy>`_. 
+        proportional to :math:`P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\epsilon)`. In general, :math:`\mathbb{K}_{\epsilon}(\cdot)` needs to be a probability density function with a large concentration of mass near 0, in which the parameter :math:`\epsilon` denotes the amount of concentration (the smaller :math:`\epsilon`, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when :math:`\epsilon \to 0`. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High performance computing in `ABCpy <https://github.com/eth-cscs/abcpy>`_. 
         
 
     .. tab-container:: tab2
         :title: ABCpy
 
-        For this work we use `ABCpy <https://github.com/eth-cscs/abcpy/tree/master/abcpy>`_ scientific library written in Python for Bayesian uncertainty quantification in absence of likelihood function, which parallelizes efficient approximate Bayesian computation (ABC) algorithms and other likelihood-free inference schemes efficiently using High performance computing.
+        For this work we use `ABCpy <https://github.com/eth-cscs/abcpy>`_ scientific library written in Python for Bayesian uncertainty quantification in absence of likelihood function, which parallelizes efficient approximate Bayesian computation (ABC) algorithms and other likelihood-free inference schemes efficiently using High performance computing.
         
 
