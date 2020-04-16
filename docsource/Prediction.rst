@@ -1,6 +1,6 @@
 .. _Prediction:
 
-Predictions for the UK (updated daily)
+Predictions for the UK (10th April)
 ================================================
 
 Number of infected
