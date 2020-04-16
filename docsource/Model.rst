@@ -14,9 +14,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
     .. tab-container:: tab1
         :title: Description
         
-        The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people are admitted into hospital. We assume that thereafter, they are isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients spend some time in the :math:`I^{SC}` one, and after that some of them will go directly to :math:`R`, and some to :math:`I^C`. From :math:`I^C`, they can either decease (going into the :math:`D` state) or recover (to :math:`R`). Essentially, this means that the subclinical state is splitted in two. (Check explanation!)
-        
-        The transmission dynamics can be visualized in the following image, 
+        The model we consider is inspired by what is happening in UK, where the patients are tested only when they have come to the hospital with symptoms. Afterwards, they are isolated and hence are not able to spread the infection. To reflect this scenario, we assume that after the exposed state, all patients will be sub-clinical :math:`I^{SC}` for a while, and after that some of them will recover (go to :math:`R`) and others will need clinical help (go to :math:`I^C`). Essentially, this means that the subclinical state is splitted into two compartments :math:`I_{SC1}` and :math:`I_{SC2}`. From :math:`I^C`, they can either decease (going into the :math:`D` state) or recover (to :math:`R`). The transmission dynamics can be visualized in the following image, 
         
         .. image:: img/SEIRD.png
 
