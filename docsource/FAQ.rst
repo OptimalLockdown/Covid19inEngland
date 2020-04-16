@@ -1,7 +1,7 @@
 .. _FAQ:
 
 Questions and Answers (for the public and media)
-==============================================
+=================================================
 
 1. What is this project?
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,4 +36,9 @@ E.g. that this prediction assumes that the lockdown stays in place and complianc
 - Caveats - regarding the accuracy of data used. Regarding the assumptions you have made in the model (like people over 70 no longer meet anyone etc.) that are overly simplified? 
 
 6. How can I get in touch with the researchers behind this study?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+7. How should I interpret the uncertainty predicted by this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

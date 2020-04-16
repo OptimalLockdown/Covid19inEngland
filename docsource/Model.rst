@@ -35,7 +35,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
 
         :math:`\frac{dI^C_i}{dt} =  \gamma_{C} I_i^{SC1} - \gamma_R   I_i^C -\nu I_i^C`
 
-        :math:`\frac{dR_i}{dt} = \gamma_{R}   I_i^{SC} + \gamma_R I_i^{SC2}`
+        :math:`\frac{dR_i}{dt} = \gamma_{R}   I_i^{C} + \gamma_R I_i^{SC2}`
 
         :math:`\frac{dD_i}{dt} =  \nu I_i^C`
 
