@@ -14,9 +14,14 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
     .. tab-container:: tab1
         :title: Description
         
-        The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people are admitted into hospital. We assume that thereafter, they are isolated, meaning that they are not able to spread the infection anymore. Therefore, we assume that after the exposed state, all patients spend some time in the :math:`I^{SC}` one, and after that some of them will go directly to :math:`R`, and some to :math:`I^C`. From :math:`I^C`, they can either decease (going into the :math:`D` state) or recover (to :math:`R`). Essentially, this means that the subclinical state is splitted in two. (Check explanation!)
+        The model we consider is inspired by what is happening in UK: in the first phase of the emergency, the majority of diagnosed people are the ones admitted into hospital. We assume that thereafter they are isolated, meaning that they are not able to spread the infection anymore.
+        The model works as follows: the population starts in the :math:`S` state (except for some individuals, who are seeding the infection). Then, once an individual in :math:`S` gets in contact with an infected one, it will go to the exposed state :math:`E`; this step happens with probability :math:`\beta` for each contact; note that in this state individuals are not yet infectious. After some incubation time, the individuals become Infected subclinical (:math:`I^{SC}`), in which they are capable of infecting other people; even if all people in this compartment act equally, we split the population in two categories: the ones which will directly recover (:math:`I_{SC2}`) and the ones that instead will need clinical help (:math:`I_{SC1}`). The split happens with an age-dependent probability :math:`\rho_i`.
+        Once in the :math:`I_{SC2}` state, people will recover after some time, and their infection is not recorder by the authorities. Instead, people in :math:`I_{SC1}` will go to hospital, therefore going to the :math:`I_{C}` state, and they are registered. From this state,
+
+
+    Therefore, we assume that after the exposed state, all patients spend some time in the :math:`I^{SC}` one, and after that some of them will go directly to :math:`R`, and some to :math:`I^C`. From :math:`I^C`, they can either decease (going into the :math:`D` state) or recover (to :math:`R`). Essentially, this means that the subclinical state is splitted in two. (Check explanation!)
         
-        The transmission dynamics can be visualized in the following image, 
+        The transmission dynamics can be visualized ad follows:
         
         .. image:: img/SEIRD.png
 
