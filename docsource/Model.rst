@@ -52,4 +52,6 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
         - :math:`\gamma_{R}` recovery rate (from both :math:`I_C` and :math:`I_{SC2}`)
         - :math:`\nu` death rate from :math:`I_{C}`
         - :math:`\rho_i`'s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters :math:`x_0` and :math:`\phi`.
+
+        The values of these parameters for our model is not known, hence we learn them based on :ref:`publicly available dataset <Data>` using :ref:`approximate Bayesian computation <Inference>`.
         
