@@ -6,7 +6,9 @@ Questions and Answers (for the public and media)
 1. What is this project?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Has two phases - current model and later on, effects of restriction measures. Who is working on these, links to university profiles. 
+This project presently focuses on developing cutting-edge epidemic models tailored to the UK population, calibrating them with approximate Bayesian computation (ABC) using data from the spread of COVID-19 in the UK provided by Public Health England (PHE), the National Health Service (NHS) and the Office for National Statistics (ONS) rather than using global estimates of parameters of transmission dynamics. We also integrate `Google mobility data <https://www.google.com/covid19/mobility/>`_ in our model to reflect the affects of the lockdown on the UK population. Lorenzo Pacchiardi of Department of statistics, University of Oxford  and `Dr. Ritabrata Dutta of Department of statistics, University of Warwick <https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/dutta/>`_ are presently working on improving the epidemic model by integrating data about commuting patterns of UK citizens constructed from the 2011 census data; 
+
+`Dr. Susana Gomes of Department of mathematics, University of Warwick <https://warwick.ac.uk/fac/sci/maths/people/staff/gomes/>`_ and `Dr. Dante Kalise of School of Mathematical Sciences, University of Nottingham <https://sites.google.com/view/dkalise>`_ are working on using these models with control theory-based techniques to design an optimal strategy of how to impose a lock-down (e.g., what commuting routes to allow, what retail to close, etc.) and exit this lock-down when the time comes (what and when to reopen), responding daily to the data from PHE, NHS and ONS. 
 
 2. How does this model differ from others that predict the spread of Covid-19?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -24,14 +26,14 @@ Questions and Answers (for the public and media)
 4. What assumptions have been made in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Three main assumptions we have used to develop our epidemic model are, 
+
 - Tested people are composed mostly of the ones who needed clinical care at the hospital
+
 - Restrictive measures as of the 9th April will be kept in place for the prediction horizon
+
 - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
 
-Other minor assumptions are explained in 
-
-
-E.g. that this prediction assumes that the lockdown stays in place and compliance continues on the same level?
+Other assumptions are explained in :ref:`Epidemic model <Model>`.
 
 5. This prediction looks scary. Are you sure it is correct? Are there any caveats?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
