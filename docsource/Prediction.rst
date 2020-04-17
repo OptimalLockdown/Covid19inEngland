@@ -12,11 +12,6 @@ Prediction of the total number of infected people and the total number of infect
 .. content-tabs::
 
     .. tab-container:: tab1
-        :title: Total infected
-        
-        DPD_image (Add image and a line about, true number, projected number and uncertainty)
-
-    .. tab-container:: tab2
         :title: Infected & Hospitalized
 
         .. image:: img/cumulative_confirmed.png
@@ -47,6 +42,7 @@ Prediction of the number of death per day, total number of deaths and deaths in 
         :title: Deaths per age-groups
 
         .. image:: img/total_deaths_age_group.png
+           :width: 13000
 
         
         DPAG_image (Add image and a line about, true number, projected number and uncertainty)
