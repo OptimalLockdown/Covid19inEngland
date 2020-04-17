@@ -1,4 +1,5 @@
 .. _Model:
+..  TODO update model
 
 Epidemic Model
 ==============================
@@ -29,11 +30,13 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
 
         :math:`\frac{dI^{SC2}_i}{dt} = (1-\rho_i) \kappa E_i - \gamma_{R}   I_i^{SC2}`
 
-        :math:`\frac{dI^C_i}{dt} =  \gamma_{C} I_i^{SC1} - \gamma_R   I_i^C -\nu I_i^C`
+        :math:`\frac{dI^{C1}_i}{dt} =  \rho'_i \gamma_{C} I_i^{SC1}  -\nu I_i^{C1}`
 
-        :math:`\frac{dR_i}{dt} = \gamma_{R}   I_i^{C} + \gamma_R I_i^{SC2}`
+        :math:`\frac{dI^{C2}_i}{dt} =  (1-\rho'_i) \gamma_{C} I_i^{SC1}  -\gamma_R I_i^{C2}`
 
-        :math:`\frac{dD_i}{dt} =  \nu I_i^C`
+        :math:`\frac{dR_i}{dt}  = \gamma_{R}   I_i^{C2} + \gamma_R I_i^{SC2}`
+
+        :math:`\frac{dD_i}{dt}  =  \nu I_i^{C1}`.
 
 
         where :math:`C` is the contact matrix representing the frequency of contacts between different age groups as in `Prem et al. (2017) <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005697>`_. Further we will consider the contact matrix to be composed of four different contributions, corresponding to contact happening respectively in home, workplace, school and other locations:
@@ -52,6 +55,8 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
                 - :math:`\gamma_{R} = 1- \exp(-1/d_R)` recovery rate (from both :math:`I_C` and :math:`I_{SC2}`), with :math:`d_C` the average number of days it takes to recover (from these two states)
                 - :math:`\nu = 1- \exp(-1/d_D)` death rate from :math:`I_{C}`, with :math:`d_L` the average number of days before death occurs after reaching the hospital (being diagnosed)
                 - :math:`\rho_i`'s: age dependent probabilities of becoming clinical; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters :math:`x_0` and :math:`\phi`, as explained in .....
+
+                - :math:`\rho'_i`'s: age dependent probabilities of death after becoming clinical; a logistic transformation is also used, as discussed above.
 
                 Moreover, initial conditions for the dynamics are needed; :math:`E_{in}`: the initial number of exposed people (which is....
 
