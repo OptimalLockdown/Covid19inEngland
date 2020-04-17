@@ -24,9 +24,11 @@ Questions and Answers (for the public and media)
 4. What assumptions have been made in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Three main assumptions we have used to develop our epidemic model are, 
-- Tested people are composed mostly of the ones which are admitted into hospital
+- Tested people are composed mostly of the ones who needed clinical care at the hospital
 - Restrictive measures as of the 9th April will be kept in place for the prediction horizon
 - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
+
+Other minor assumptions are explained in 
 
 
 E.g. that this prediction assumes that the lockdown stays in place and compliance continues on the same level?
