@@ -25,6 +25,7 @@ Likelihood-free inference
         proportional to :math:`P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\epsilon)`. In general, :math:`\mathbb{K}_{\epsilon}(\cdot)` needs to be a probability density function with a large concentration of mass near 0, in which the parameter :math:`\epsilon` denotes the amount of concentration (the smaller :math:`\epsilon`, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when :math:`\epsilon \to 0`. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High Performance Computing in `ABCpy <https://github.com/eth-cscs/abcpy>`_.
         
     .. TODO: discuss that the likelihood is actually a delta function as the model is deterministic/where does uncertainty come from?
+    .. TODO: add priors?
 
     .. tab-container:: tab2
         :title: ABCpy

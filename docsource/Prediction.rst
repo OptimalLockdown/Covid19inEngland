@@ -7,9 +7,7 @@ Predictions for England (Updated on 11th April)
 
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the total number of infected people who are diagnosed (most of them needing hospitalisation).
-
-and the number of hospital beds needed for COVID-19 patients per day.
+Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), and the daily number of new diagnoses.
 
 .. content-tabs::
 
@@ -20,9 +18,9 @@ and the number of hospital beds needed for COVID-19 patients per day.
         Data is referred to the day the specimen was collected, not to the reporting date.
 
     .. tab-container:: tab2
-        :title: Hospital beds needed per day
+        :title: Daily new diagnoses
 
-        .. image:: img/cumulative_confirmed.png
+        .. image:: img/daily_confirmed.png
 
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,6 +106,6 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
  - Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government announced that such restrictive measures will be kept in place until the DATE, PUT LINK!
  - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
 
-Moreover, a key assumption of this model is that a persona cannot catch the disease twice; this is still not clear; however, even if this was the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
+Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
 
 For more details please check :ref:`Epidemic model <Model>`, :ref:`approximate Bayesian computation <Inference>` and :ref:`Data sources <Data>`.
