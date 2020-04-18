@@ -10,8 +10,8 @@ The following data is used in this project:
     .. tab-container:: tab1
         :title: NHS/UK Government
 
-        - `NHS England <https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/>`_ reports daily deaths with age group in 20-years bands happening in hospitals.
-        - `UK Government website <https://coronavirus.data.gov.uk/>`_ reports daily overall number positive and deaths, with no age information but with geographical location. Presently, we neglected the location information, but we plan to use that in a metapopulation model.
+        - `NHS England <https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/>`_ reports daily deaths with age group in 20-years bands happening in hospitals; deaths are referred to actual occurrence date, not to report date.
+        - `UK Government website <https://coronavirus.data.gov.uk/>`_ reports daily overall number positive and deaths, with no age information but with geographical location. Presently, we neglected the location information, but we plan to use that in a metapopulation model. Here as well, dates are referred to specimen/death date.
         - `ONS data on UK population <https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland>`_, mid-2018 estimate (most recent available); this reports details on age distribution of UK population, besides many more information (for instance geographical distribution).
 
     .. tab-container:: tab2

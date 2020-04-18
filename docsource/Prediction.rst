@@ -1,13 +1,15 @@
 .. _Prediction:
 
-Predictions for the UK (Updated on 11th April)
+Predictions for England (Updated on 11th April)
 ================================================
 
 
 
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the total number of infected people who needed hospitalization and the number of hospital beds needed for COVID-19 patients per day. 
+Prediction of the total number of infected people who are diagnosed (most of them needing hospitalisation).
+
+and the number of hospital beds needed for COVID-19 patients per day.
 
 .. content-tabs::
 
@@ -15,13 +17,12 @@ Prediction of the total number of infected people who needed hospitalization and
         :title: Infected & Hospitalized
 
         .. image:: img/cumulative_confirmed.png
-        True data matches the median prediction very well.
+        Data is referred to the day the specimen was collected, not to the reporting date.
 
     .. tab-container:: tab2
         :title: Hospital beds needed per day
 
         .. image:: img/cumulative_confirmed.png
-        True data matches the median prediction very well.
 
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,7 +42,6 @@ Prediction of the number of deaths in hospital per day and total number of death
         :title: Total deaths
 
         .. image:: img/total_deaths.png
-
 
 
 Deaths in hospital in each age group
