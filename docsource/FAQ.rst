@@ -17,9 +17,18 @@ Further, `Dr. Susana Gomes of Department of mathematics, University of Warwick <
 2. How does this model differ from others that predict the spread of Covid-19?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Refer to and link e.g. IHME model and explain very shortly the difference. Refer to and link article about model used by UK government, that it is not public, etc. 
+The model we considered is a *compartmental* model, meaning one where the population (of England, in our case) is divided in compartments with different features. The population is assumed to be well-mixed, ie each person has the same probability to meet with any other person; see :ref:`here <4. What assumptions have been made in this model?>` for further discussion on what does this assumption mean. The evolution of the number of people in each compartment over time is described by some :ref:`equations <Model>` (ODEs).
 
-- Possibly mention that you are interested in other models, and people can get in touch with you if they know of some?
+This approach is different from so-called *individual-based models*, which aim to describe the action of each distinct individual but is harder to handle and more computationally intensive, being therefore more suited for the study of smaller size populations; an example of such kind of models in action can be seen `here <https://korona.kausal.tech/sim/en>`_. Some other models, for instance `this one by the Institute for Health Metrics and Evaluation (IHME) <https://covid19.healthdata.org/united-kingdom>`_  use instead curve-fitting approaches, by fitting some complex nonlinear mixed-effects model to the available data.
+
+Another main difference is the :ref:`fitting procedure which we used <Likelihood-free inference>`: based on Bayesian statistics, we are able to leverage expertise about the parameters (by defining prior probabilities on them) but at the same time choosing the final value of them based on data. Moreover, the use of `ABCpy <https://github.com/eth-cscs/abcpy>`_ library allows us to perform efficient inference exploiting High Performance Computing, even in the present case of a model in which no direct inference procedure is possible.
+
+Of course, we are happy to hear any comments or suggestions about improvements to the model; please see :ref:`here <6. How can I get in touch with the researchers behind this study?>` for contact informations.
+
+DON'T KNOW ABOUT UK MODEL!
+
+..  Refer to and link e.g. IHME model and explain very shortly the difference. Refer to and link article about model used by UK government, that it is not public, etc.
+..  Possibly mention that you are interested in other models, and people can get in touch with you if they know of some?
 
 
 3. How should I interpret the uncertainty predicted by this model?
@@ -39,31 +48,28 @@ Overall, it is hard to be sure that this uncertainty is *calibrated*, namely tha
 .. First, it probably is the case that the observation we get from reality is not a full realization of the model
 
 
-(If the prediction is very different, especially if a lot more deaths etc:
-
-4. Why do you predict a lot more deaths than other models?)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-5. What assumptions have been made in this model?
+4. What assumptions have been made in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Three main assumptions we have used to develop our epidemic model are:
 
-- Tested people are composed mostly of the ones who needed clinical care at the hospital
+- Tested people are composed mostly of the ones who needed clinical care at the hospital; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done on people with a medical need and the most essential workers and their families.
 
-- Restrictive measures as of the 9th April will be kept in place for the prediction horizon
+- Restrictive measures as of the 11th April will be kept in place for the prediction horizon
 
 - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
+
+- Conditions about hospital use remain more or less constants; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.
 
 - Finally, we are assuming that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
 
 Other assumptions are explained in :ref:`Epidemic model <Model>`.
 
-6. This prediction looks scary. Are you sure it is correct? Are there any caveats?
+5. This prediction looks scary. Are you sure it is correct? Are there any caveats?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Of course we are **not** sure it is correct; nobody can predict the future and, moreover, every model is a simplification of reality. However, some models may be useful to have better understanding of possible outcomes of some phenomena, given some conditions. Therefore, you need to take into account that:
 
-- the predictions of this model are based on some :ref:`assumptions <5. What assumptions have been made in this model?>`, and if in reality these assumptions will not be satisfied (as the fact that restrictive measures will be kept in place for the prediction horizon), the forecast will most likely be invalidated.
+- the predictions of this model are based on some :ref:`assumptions <4. What assumptions have been made in this model?>`, and if in reality these assumptions will not be satisfied (as the fact that restrictive measures will be kept in place for the prediction horizon), the forecast will most likely be invalidated.
 
 - Our predictions contain an uncertainty range, but what that uncertainty means is hard to be understood (as discussed :ref:`here <3. How should I interpret the uncertainty predicted by this model?>`).
 
@@ -77,7 +83,7 @@ Of course we are **not** sure it is correct; nobody can predict the future and, 
     - About variation - are the graphs you show the average of a range etc?
     - Caveats - regarding the accuracy of data used. Regarding the assumptions you have made in the model (like people over 70 no longer meet anyone etc.) that are overly simplified?
 
-7. How can I get in touch with the researchers behind this study?
+6. How can I get in touch with the researchers behind this study?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To know more about this research project, please contact Dr. Ritabrata Dutta at Ritabrata.Dutta@warwick.ac.uk. 
 
