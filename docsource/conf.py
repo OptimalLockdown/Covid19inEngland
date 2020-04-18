@@ -70,7 +70,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'COVIDinEngland'
+project = 'COVID-19 in England'
 copyright = '2020, Lorenzo Pacchiardi and Ritabrata Dutta'
 author = 'Lorenzo Pacchiardi and Ritabrata Dutta'
 
