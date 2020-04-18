@@ -3,7 +3,7 @@
 Epidemic Model
 ==============================
 
-age-structured :math:`SEI^3RD`
+age-structured :math:`SEI^4RD`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Presently, we are using a compartmental model, which splits whole of the UK population into  compartments representing different possible states (Susceptible (:math:`S`), Exposed (:math:`E`) but not infectious, asymptomatic and symptomatic Infected subclinical (:math:`I^{SC}`, split in :math:`I^{SC1}` and :math:`I^{SC2}`) not needing medical attention, Infected clinical needing medical attention (:math:`I^{C}`, split in :math:`I^{C1}` and :math:`I^{C2}`), Recovered (:math:`R`) and Deceased (:math:`D`)). Further each of the states are structured along 5 age groups: :math:`0-19, 20-39, 40-59, 60-79, 80+`, hence :math:`E_i` stands for the exposed population at the :math:`i`-th age group, and similarly for the other states.
