@@ -1,13 +1,13 @@
 .. _Prediction:
 
-Predictions for the UK (11th April)
+Predictions for the UK (Updated on 11th April)
 ================================================
 
 
 
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the total number of infected people and the total number of infected people who needed hospitalization. 
+Prediction of the total number of infected people who needed hospitalization and the number of hospital beds needed for COVID-19 patients per day. 
 
 .. content-tabs::
 
@@ -17,10 +17,15 @@ Prediction of the total number of infected people and the total number of infect
         .. image:: img/cumulative_confirmed.png
         True data matches the median prediction very well.
 
+    .. tab-container:: tab2
+        :title: Hospital beds needed per day
 
-Number of deaths
-~~~~~~~~~~~~~~~~
-Prediction of the number of death per day, total number of deaths and deaths in the 5 age groups: :math:`<20, 20-40, 40-60, 60-80, 80>`.
+        .. image:: img/cumulative_confirmed.png
+        True data matches the median prediction very well.
+
+Number of deaths in hospital
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prediction of the number of deaths in hospital per day and total number of deaths.
 
 .. content-tabs::
 
@@ -38,15 +43,41 @@ Prediction of the number of death per day, total number of deaths and deaths in 
 
         TD_image (Add image and a line about, true number, projected number and uncertainty)
 
-    .. tab-container:: tab3
-        :title: Deaths per age-groups
 
-        .. image:: img/total_deaths_age_group.png
-           :width: 13000
+Deaths in hospital in each age group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prediction of total number of deaths in the 5 age groups: :math:`<20, 20-39, 40-59, 60-79, 80+`.
 
+.. content-tabs::
+
+    .. tab-container:: tab1
+        :title:  <20
         
-        DPAG_image (Add image and a line about, true number, projected number and uncertainty)
+        .. image:: img/total_deaths_per_day.png
 
+    .. tab-container:: tab2
+        :title:  20-39
+        
+        .. image:: img/total_deaths_per_day.png
+
+
+    .. tab-container:: tab3
+        :title:  40-59
+        
+        .. image:: img/total_deaths_per_day.png
+
+
+    .. tab-container:: tab4
+        :title:  60-79
+        
+        .. image:: img/total_deaths_per_day.png
+
+
+    .. tab-container:: tab5
+        :title:  80+
+        
+        .. image:: img/total_deaths_per_day.png
+        
 
 Age-specific probabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
