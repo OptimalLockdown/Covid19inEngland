@@ -3,8 +3,12 @@
 Questions and Answers (for the public and media)
 =================================================
 
+.. TODO: add discussion on data-driven fitting wrt parameters determined by clinician knowledge, and fact that parameters that better fit a model are not the ones that are actually the true physical parameters with that physical meaning. However, possibilitiy of leveraging experts adive (through priors) and data-driven procedures.
+
+
 1. What is this project?
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 This project presently focuses on developing cutting-edge epidemic models tailored to the UK population, calibrating them with approximate Bayesian computation (ABC) using data from the spread of COVID-19 in the UK provided by Public Health England (PHE), the National Health Service (NHS) and the Office for National Statistics (ONS) rather than using global estimates of parameters of transmission dynamics. We also integrate `Google mobility data <https://www.google.com/covid19/mobility/>`_ in our model to reflect the affects of the lockdown on the UK population. Lorenzo Pacchiardi of Department of statistics, University of Oxford  and `Dr. Ritabrata Dutta of Department of statistics, University of Warwick <https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/dutta/>`_ are presently working on improving the epidemic model by integrating data about commuting patterns of UK citizens constructed from the 2011 census data.
 
@@ -18,7 +22,6 @@ Further, `Dr. Susana Gomes of Department of mathematics, University of Warwick <
 - Possibly mention that you are interested in other models, and people can get in touch with you if they know of some?
 
 
-
 3. How should I interpret the uncertainty predicted by this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,7 +30,7 @@ What we get from the inference scheme applied to our model is not a pointwise es
 This uncertainty can be thought of as arising from two different things:
 
 1. It may be the case that the reality cannot be described perfectly by a realization of our (deterministic) model, for any choice of parameters; this is the case of a *misspecified model*. Therefore, there could be several choice of the parameters that give slightly different realizations that approximate the truth in a similar way.
-2. Moreover, the inference scheme we use is *approximate*: it gives us a blur of the true parameter distribution. As discussed in ..., this corresponds to assuming some noise structure on the observation on which the model is fit.
+2. Moreover, the inference scheme we use is *approximate*: it gives us a blur of the true parameter distribution. As discussed in `Wilkinson (2008) <https://www.degruyter.com/view/journals/sagmb/12/2/article-p129.xml>`_, this corresponds to assuming some noise structure on the observation on which the model is fit; it is probably the case that the data is not perfect, but understanding the quantity of noise present in it is an hard issue as well.
 
 Overall, it is hard to be sure that this uncertainty is *calibrated*, namely that it actually describes the underlying probability of the parameters.
 
@@ -58,10 +61,21 @@ Other assumptions are explained in :ref:`Epidemic model <Model>`.
 6. This prediction looks scary. Are you sure it is correct? Are there any caveats?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- A short explanation about how models are always a simplification of complex reality. 
-- About error. 
-- About variation - are the graphs you show the average of a range etc?
-- Caveats - regarding the accuracy of data used. Regarding the assumptions you have made in the model (like people over 70 no longer meet anyone etc.) that are overly simplified? 
+Of course we are **not** sure it is correct; nobody can predict the future and, moreover, every model is a simplification of reality. However, some models may be useful to have better understanding of possible outcomes of some phenomena, given some conditions. Therefore, you need to take into account that:
+
+- the predictions of this model are based on some :ref:`assumptions <5. What assumptions have been made in this model?>`, and if in reality these assumptions will not be satisfied (as the fact that restrictive measures will be kept in place for the prediction horizon), the forecast will most likely be invalidated.
+
+- Our predictions contain an uncertainty range, but what that uncertainty means is hard to be understood (as discussed :ref:`here <3. How should I interpret the uncertainty predicted by this model?>`).
+
+- The predictions eventually rely on the accuracy of the data the model was provided with; in emergency settings like this, data is a partial observation of reality. Our model tries to take that into account for some part (for instance explicitly modelling the confirmed cases as the ones who come into hospital, which is mostly true in the first phase of the pandemics in the UK), but of course it cannot do that perfectly.
+
+- As said above, every model is a simplification of reality, and this is clearly an extreme simplification, as it describes the whole population in England as if it was a well-mixed fluid, so that every person can interact with anyone else with the same probability. This is of course not the case, but models which describe in more detail are harder to handle and fit to the data. Moreover, this kind of *well-mixed* models are quite commonly applied in the epidemics settings, and they have shown to have a fair amount of predictive power, when the considered populations are large. We hope that this is the case for the present setting as well.
+
+.. write:
+    - A short explanation about how models are always a simplification of complex reality.
+    - About error.
+    - About variation - are the graphs you show the average of a range etc?
+    - Caveats - regarding the accuracy of data used. Regarding the assumptions you have made in the model (like people over 70 no longer meet anyone etc.) that are overly simplified?
 
 7. How can I get in touch with the researchers behind this study?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

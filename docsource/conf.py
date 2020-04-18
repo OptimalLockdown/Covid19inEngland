@@ -48,7 +48,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.mathjax',
     'sphinx.ext.napoleon',
-    'sphinxcontrib.contentui'
+    'sphinxcontrib.contentui',
+    'sphinx.ext.autosectionlabel'
 ]
 
 #autodoc_member_order = 'bysource'
@@ -69,7 +70,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'COVIDinUK'
+project = 'COVIDinEngland'
 copyright = '2020, Lorenzo Pacchiardi and Ritabrata Dutta'
 author = 'Lorenzo Pacchiardi and Ritabrata Dutta'
 

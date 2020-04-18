@@ -4,7 +4,6 @@ Predictions for England (Updated on 11th April)
 ================================================
 
 
-
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), and the daily number of new diagnoses.
@@ -103,7 +102,7 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
 
 **Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
  - Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done on people with a medical need and the most essential workers and their families.
- - Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government announced that such restrictive measures will be kept in place until the DATE, PUT LINK!
+ - Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government `announced <https://www.bbc.com/news/uk-52313715>`_ that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.
  - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
 
 Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
