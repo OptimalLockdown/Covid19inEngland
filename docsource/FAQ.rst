@@ -46,3 +46,8 @@ E.g. that this prediction assumes that the lockdown stays in place and complianc
 
 7. How should I interpret the uncertainty predicted by this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As noticed in the discussion about the :ref:`likelihood-free inference method <Inference>`, the posterior distribution we get is an approximation (a sort of blurring) of the true posterior. We remark that, in this case, the model we use is deterministic, so that its likelihood (and hence posterior) is a singular value peaked in the parameters value corresponding to the truth. We instead get a wider, smoother posterior; so, how is that to be interpreted? Notice the following two thigs:
+
+- First, it probably is the case that the observation we get from reality is not a full realization of the model
+
