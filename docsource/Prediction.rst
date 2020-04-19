@@ -7,7 +7,7 @@ Predictions for England (Updated on 11th April)
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), and the daily number of new diagnoses.
-Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
+Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region. Dotted vertical line denotes the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
 
 .. content-tabs::
 
@@ -21,6 +21,13 @@ Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertain
         :title: Daily new diagnoses
 
         .. image:: img/daily_confirmed.png
+
+    .. tab-container:: tab3
+        :title: Active infected
+
+        .. image:: img/total_number_infected.png
+
+        We estimate the number of active infected people (ie people who are capable of spreading the infection, as they are in the :math:`I^{SC}` state) for each day of the model. Note that the uncertainty here is very large as we do not have real data on this; note also that the y axis here has to be multiplied by :math:`10^7`.
 
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
