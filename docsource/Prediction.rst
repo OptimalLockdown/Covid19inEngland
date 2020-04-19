@@ -7,6 +7,7 @@ Predictions for England (Updated on 11th April)
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), and the daily number of new diagnoses.
+Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
 
 .. content-tabs::
 
@@ -24,6 +25,7 @@ Prediction of the cumulative total number of infected people who are diagnosed (
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of the number of deaths in hospital per day and total number of deaths. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
+Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
 
 .. content-tabs::
 
@@ -44,6 +46,7 @@ Prediction of the number of deaths in hospital per day and total number of death
 Deaths in hospital in each age group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of total number of deaths in the 5 age groups: :math:`0-19,   20-39, 40-59, 60-79, 80+`, versus the day the deaths actually happened.
+Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
 
 .. content-tabs::
 
