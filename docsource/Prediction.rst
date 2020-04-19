@@ -6,8 +6,7 @@ Predictions for England (Updated on 11th April)
 
 Number of infected
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), and the daily number of new diagnoses.
-Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region. Dotted vertical line denotes the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
+Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), the daily number of new diagnoses, the number of infectious people. 
 
 .. content-tabs::
 
@@ -15,24 +14,27 @@ Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertain
         :title: Infected & Hospitalized
 
         .. image:: img/cumulative_confirmed.png
-        Data is referred to the day the specimen was collected, not to the reporting date.
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab2
         :title: Daily new diagnoses
 
         .. image:: img/daily_confirmed.png
-
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        
     .. tab-container:: tab3
-        :title: Active infected
+        :title: Infectious people
 
         .. image:: img/total_number_infected.png
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
-        We estimate the number of active infected people (ie people who are capable of spreading the infection, as they are in the :math:`I^{SC}` state) for each day of the model. Note that the uncertainty here is very large as we do not have real data on this; note also that the y axis here has to be multiplied by :math:`10^7`.
+        We predict the number of infectious people for each day using our model. The uncertainty in our prediction here is very high as we do not have real data about this number. The y axis here has to be multiplied by :math:`10^7`.
+
+The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
 
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the number of deaths in hospital per day and total number of deaths. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
-Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
+Prediction of the number of deaths in hospital per day and total number of deaths. 
 
 .. content-tabs::
 
@@ -40,20 +42,22 @@ Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertain
         :title: Deaths per day 
 
         .. image:: img/total_deaths_per_day.png
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
-        According to this model, we are right now close at the peak of number of deaths per day; note that these are considered by the date the death actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
+        According to this model, we are right now close at the peak of number of deaths per day.
 
 
     .. tab-container:: tab2
         :title: Total deaths
 
         .. image:: img/total_deaths.png
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
+The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
 
 Deaths in hospital in each age group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prediction of total number of deaths in the 5 age groups: :math:`0-19,   20-39, 40-59, 60-79, 80+`, versus the day the deaths actually happened.
-Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertainty predicted by this model?>`, specifically 95% High Posterior Density (HPD) region.
 
 .. content-tabs::
 
@@ -61,12 +65,13 @@ Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertain
         :title:  0-19
         
         .. image:: img/total_deaths_age_group_0.png
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab2
         :title:  20-39
         
         .. image:: img/total_deaths_age_group_1.png
-
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab3
         :title:  40-59
@@ -78,13 +83,13 @@ Shaded area indicates :ref:`uncertainty <3. How should I interpret the uncertain
         :title:  60-79
         
         .. image:: img/total_deaths_age_group_3.png
-
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab5
         :title:  80+
         
         .. image:: img/total_deaths_age_group_4.png
-        
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)        
 
 Age-specific probabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,13 +114,24 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     From our estimate of the parameters, we can estimate :math:`R_0`, ie the basic reproduction number, for this pandemic.
 
+**Main Conclusions**: (Last updated on 20 April 2020.)
+
+- According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks. 
+
+- According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June. 
+
+- As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people. 
 
 **Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
- - Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done on people with a medical need and the most essential workers and their families.
- - Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government `announced <https://www.bbc.com/news/uk-52313715>`_ that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.
- - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
+
+- Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done on people with a medical need and the most essential workers and their families.
+
+- Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government `announced <https://www.bbc.com/news/uk-52313715>`_ that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.
+
+- Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
+
 - Conditions about hospital use remain more or less constants; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.
 
-Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
+- Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.
 
 For more details please check :ref:`Epidemic model <Model>`, :ref:`approximate Bayesian computation <Inference>` and :ref:`Data sources <Data>`.
