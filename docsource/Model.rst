@@ -51,7 +51,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
                 - :math:`\beta` probability of an :math:`S`-:math:`I^{SC}` contact to result in the S individual catching the infection
                 - :math:`\kappa = 1- \exp(-1/d_L)` transition rate of exposed individual becoming infectious, with :math:`d_L` the average number of days in this latent state
                 - :math:`\gamma_{C} = 1- \exp(-1/d_C)` transition rate of going from from :math:`I^{SC1}` to :math:`I^C`, with :math:`d_C` the average number of days it takes to undergo this transition
-                - :math:`\gamma_{R} = 1- \exp(-1/d_R)` recovery rate (from both :math:`I^{C2}` and :math:`I^{SC2}`), with :math:`d_C` the average number of days it takes to recover (from these two states)
+                - :math:`\gamma_{R} = 1- \exp(-1/d_R)` recovery rate (from both :math:`I^{C2}` and :math:`I^{SC2}`), with :math:`d_R` the average number of days it takes to recover (from these two states)
                 - :math:`\nu = 1- \exp(-1/d_D)` death rate from :math:`I^{C1}`, with :math:`d_D` the average number of days before death occurs after being diagnosed (which mostly corresponds to reaching the hospital)
                 - :math:`\rho_i`'s: age dependent probabilities of going to :math:`I^C` instead of directly recovering from the :math:`I^{SC}` state; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters :math:`x_0` and :math:`\phi`, as explained in the following.
                 - :math:`\rho'_i`'s: age dependent probabilities of death after becoming clinical; a logistic transformation with parameters :math:`x_0'` and :math:`\phi'` is used.
@@ -63,7 +63,7 @@ Presently, we are using a compartmental model, which splits whole of the UK popu
 
         :math:`\rho_i = (1 + \exp(-\omega(x_i-x_0))^{-1}, \quad \omega = 4 \tan(\phi)`,
 
-        where :math:`x_i` is the index of the age group (from 0 to 4), :math:`x_0` indicates where the midpoint of the curve is reached, and :math:`\phi \in [0, \pi/2]` represents the slope of the tangent line in the midpoint of the curve.
+        where :math:`x_i` is the index of the age group (from 0 to 4 in increasing age order), :math:`x_0` indicates where the midpoint of the curve is reached, and :math:`\phi \in [0, \pi/2]` represents the slope of the tangent line in the midpoint of the curve.
 
         The same transformation is also done for :math:`\rho'_i`; note that this assumes that both probabilities increase for older age groups, but this is motivated by the reality.
 

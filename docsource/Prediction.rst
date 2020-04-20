@@ -25,7 +25,7 @@ Prediction of the cumulative total number of infected people who are diagnosed (
     .. tab-container:: tab3
         :title: Infectious people
 
-        .. image:: img/total_number_infected.png
+        .. image:: img/total_number_infectious.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
 
         We predict the number of infectious people for each day using our model. The uncertainty in our prediction here is very high as we do not have real data about this number. The y axis here has to be multiplied by :math:`10^7`.
@@ -124,7 +124,8 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
 
 **Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
 
-- Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done on people with a medical need and the most essential workers and their families.
+- Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the "pillar 1" category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_
+
 
 - Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government `announced <https://www.bbc.com/news/uk-52313715>`_ that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.
 
