@@ -1,21 +1,20 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Epidemic Model &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/contentui.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/contentui.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Public Data Sources" href="Data.html" />
@@ -38,8 +37,8 @@
             
   <div class="section" id="epidemic-model">
 <span id="model"></span><h1>Epidemic Model<a class="headerlink" href="#epidemic-model" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="age-structured">
-<h2>age-structured <span class="math notranslate nohighlight">\(SEI^4RD\)</span><a class="headerlink" href="#age-structured" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="age-structured-sei-4rd">
+<h2>age-structured <span class="math notranslate nohighlight">\(SEI^4RD\)</span><a class="headerlink" href="#age-structured-sei-4rd" title="Permalink to this headline">¶</a></h2>
 <p>Presently, we are using a compartmental model, which splits whole of the UK population into  compartments representing different possible states (Susceptible (<span class="math notranslate nohighlight">\(S\)</span>), Exposed (<span class="math notranslate nohighlight">\(E\)</span>) but not infectious, asymptomatic and symptomatic Infected subclinical (<span class="math notranslate nohighlight">\(I^{SC}\)</span>, split in <span class="math notranslate nohighlight">\(I^{SC1}\)</span> and <span class="math notranslate nohighlight">\(I^{SC2}\)</span>) not needing medical attention, Infected clinical needing medical attention (<span class="math notranslate nohighlight">\(I^{C}\)</span>, split in <span class="math notranslate nohighlight">\(I^{C1}\)</span> and <span class="math notranslate nohighlight">\(I^{C2}\)</span>), Recovered (<span class="math notranslate nohighlight">\(R\)</span>) and Deceased (<span class="math notranslate nohighlight">\(D\)</span>)). Further each of the states are structured along 5 age groups: <span class="math notranslate nohighlight">\(0-19, 20-39, 40-59, 60-79, 80+\)</span>, hence <span class="math notranslate nohighlight">\(E_i\)</span> stands for the exposed population at the <span class="math notranslate nohighlight">\(i\)</span>-th age group, and similarly for the other states.</p>
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
@@ -61,18 +60,17 @@
 </div>
 <div class="tab-content docutils container" id="tab-tab2">
 <p class="tab-title">Parameters</p>
-<dl class="docutils">
-<dt>The parameters of the considered model are following:</dt>
-<dd><ul class="first simple">
-<li><span class="math notranslate nohighlight">\(\beta\)</span> probability of an <span class="math notranslate nohighlight">\(S\)</span>-<span class="math notranslate nohighlight">\(I^{SC}\)</span> contact to result in the S individual catching the infection</li>
-<li><span class="math notranslate nohighlight">\(\kappa = 1- \exp(-1/d_L)\)</span> transition rate of exposed individual becoming infectious, with <span class="math notranslate nohighlight">\(d_L\)</span> the average number of days in this latent state</li>
-<li><span class="math notranslate nohighlight">\(\gamma_{C} = 1- \exp(-1/d_C)\)</span> transition rate of going from from <span class="math notranslate nohighlight">\(I^{SC1}\)</span> to <span class="math notranslate nohighlight">\(I^C\)</span>, with <span class="math notranslate nohighlight">\(d_C\)</span> the average number of days it takes to undergo this transition</li>
-<li><span class="math notranslate nohighlight">\(\gamma_{R} = 1- \exp(-1/d_R)\)</span> recovery rate (from both <span class="math notranslate nohighlight">\(I^{C2}\)</span> and <span class="math notranslate nohighlight">\(I^{SC2}\)</span>), with <span class="math notranslate nohighlight">\(d_R\)</span> the average number of days it takes to recover (from these two states)</li>
-<li><span class="math notranslate nohighlight">\(\nu = 1- \exp(-1/d_D)\)</span> death rate from <span class="math notranslate nohighlight">\(I^{C1}\)</span>, with <span class="math notranslate nohighlight">\(d_D\)</span> the average number of days before death occurs after being diagnosed (which mostly corresponds to reaching the hospital)</li>
-<li><span class="math notranslate nohighlight">\(\rho_i\)</span>‘s: age dependent probabilities of going to <span class="math notranslate nohighlight">\(I^C\)</span> instead of directly recovering from the <span class="math notranslate nohighlight">\(I^{SC}\)</span> state; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, as explained in the following.</li>
-<li><span class="math notranslate nohighlight">\(\rho'_i\)</span>‘s: age dependent probabilities of death after becoming clinical; a logistic transformation with parameters <span class="math notranslate nohighlight">\(x_0'\)</span> and <span class="math notranslate nohighlight">\(\phi'\)</span> is used.</li>
+<dl>
+<dt>The parameters of the considered model are following:</dt><dd><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> probability of an <span class="math notranslate nohighlight">\(S\)</span>-<span class="math notranslate nohighlight">\(I^{SC}\)</span> contact to result in the S individual catching the infection</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa = 1- \exp(-1/d_L)\)</span> transition rate of exposed individual becoming infectious, with <span class="math notranslate nohighlight">\(d_L\)</span> the average number of days in this latent state</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_{C} = 1- \exp(-1/d_C)\)</span> transition rate of going from from <span class="math notranslate nohighlight">\(I^{SC1}\)</span> to <span class="math notranslate nohighlight">\(I^C\)</span>, with <span class="math notranslate nohighlight">\(d_C\)</span> the average number of days it takes to undergo this transition</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma_{R} = 1- \exp(-1/d_R)\)</span> recovery rate (from both <span class="math notranslate nohighlight">\(I^{C2}\)</span> and <span class="math notranslate nohighlight">\(I^{SC2}\)</span>), with <span class="math notranslate nohighlight">\(d_R\)</span> the average number of days it takes to recover (from these two states)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu = 1- \exp(-1/d_D)\)</span> death rate from <span class="math notranslate nohighlight">\(I^{C1}\)</span>, with <span class="math notranslate nohighlight">\(d_D\)</span> the average number of days before death occurs after being diagnosed (which mostly corresponds to reaching the hospital)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_i\)</span>’s: age dependent probabilities of going to <span class="math notranslate nohighlight">\(I^C\)</span> instead of directly recovering from the <span class="math notranslate nohighlight">\(I^{SC}\)</span> state; in order to reduce number of parameters, it is parametrized by a logistic transformation with parameters <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, as explained in the following.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho'_i\)</span>’s: age dependent probabilities of death after becoming clinical; a logistic transformation with parameters <span class="math notranslate nohighlight">\(x_0'\)</span> and <span class="math notranslate nohighlight">\(\phi'\)</span> is used.</p></li>
 </ul>
-<p class="last">Moreover, initial conditions for the dynamics are needed; <span class="math notranslate nohighlight">\(E_{in}\)</span>: the initial number of exposed people; we distribute this number of initially exposed people over the age groups in order to approximately reflect the age distribution of incoming flight passengers to the UK (check for instance <a class="reference external" href="https://www.statista.com/statistics/304641/age-distribution-of-air-passengers-by-airport-uk/">here</a>) as we are assuming the disease was brought to the UK from abroad; this results therefore in using the following rates in the age groups (from youngest to oldest): 0.1, 0.4, 0.35, 0.1, 0.05.</p>
+<p>Moreover, initial conditions for the dynamics are needed; <span class="math notranslate nohighlight">\(E_{in}\)</span>: the initial number of exposed people; we distribute this number of initially exposed people over the age groups in order to approximately reflect the age distribution of incoming flight passengers to the UK (check for instance <a class="reference external" href="https://www.statista.com/statistics/304641/age-distribution-of-air-passengers-by-airport-uk/">here</a>) as we are assuming the disease was brought to the UK from abroad; this results therefore in using the following rates in the age groups (from youngest to oldest): 0.1, 0.4, 0.35, 0.1, 0.05.</p>
 </dd>
 </dl>
 <p><strong>Logistic transformation for age-specific transition probabilities:</strong>
@@ -122,17 +120,15 @@ In order to reduce the number of parameters needed to describe <span class="math
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -141,7 +137,7 @@ In order to reduce the number of parameters needed to describe <span class="math
       &copy;2020, Lorenzo Pacchiardi and Ritabrata Dutta.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

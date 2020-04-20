@@ -14,19 +14,19 @@ Prediction of the cumulative total number of infected people who are diagnosed (
         :title: Infected & Hospitalized
 
         .. image:: img/cumulative_confirmed.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab2
         :title: Daily new diagnoses
 
         .. image:: img/daily_confirmed.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
 ..         
     .. tab-container:: tab3
         :title: Infectious people
         .. image:: img/total_number_infectious.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
         We predict the number of infectious people for each day using our model. The uncertainty in our prediction here is very high as we do not have real data about this number. The y axis here has to be multiplied by :math:`10^7`.
     
 The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
@@ -41,7 +41,7 @@ Prediction of the number of deaths in hospital per day and total number of death
         :title: Deaths per day 
 
         .. image:: img/total_deaths_per_day.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
         According to this model, we are right now close at the peak of number of deaths per day.
 
@@ -50,7 +50,7 @@ Prediction of the number of deaths in hospital per day and total number of death
         :title: Total deaths
 
         .. image:: img/total_deaths.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
 The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
 
@@ -64,13 +64,13 @@ Prediction of total number of deaths in the 5 age groups: :math:`0-19,   20-39, 
         :title:  0-19
         
         .. image:: img/total_deaths_age_group_0.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab2
         :title:  20-39
         
         .. image:: img/total_deaths_age_group_1.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab3
         :title:  40-59
@@ -82,13 +82,13 @@ Prediction of total number of deaths in the 5 age groups: :math:`0-19,   20-39, 
         :title:  60-79
         
         .. image:: img/total_deaths_age_group_3.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab5
         :title:  80+
         
         .. image:: img/total_deaths_age_group_4.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)        
+        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
 Age-specific probabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,21 +1,20 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Questions and Answers (for the public and media) &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/contentui.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/contentui.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Inference" href="Inference.html" />
@@ -65,11 +64,11 @@
 <h3>2. What assumptions have been made in this model?<a class="headerlink" href="#what-assumptions-have-been-made-in-this-model" title="Permalink to this headline">¶</a></h3>
 <p>Five main assumptions we have used to develop our epidemic model are:</p>
 <ul class="simple">
-<li>The <strong>people who have been tested are mostly those who needed clinical care in hospitals</strong>. This assumption is backed up by <a class="reference external" href="https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public">government data on testing</a>: as of the 15th of April, 390,731 out of 417,649 tests were done mostly on people with a medical need in hospital and the most essential NHS workers and their families, a further detailed <a class="reference external" href="https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes">here</a>.</li>
-<li>The <strong>restrictive measures that are in effect as of 11 April will be kept in place</strong> for the prediction horizon, i.e. until the end date of the prediction.</li>
-<li>Once people are <strong>tested positive and admitted into hospital, they are isolated</strong> and no longer able to transmit the infection.</li>
-<li><strong>Conditions about hospital use remain more or less constant</strong>; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.</li>
-<li>Finally, we assume that <strong>a person cannot catch the disease twice</strong>. This is still a matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would naturally make a great difference in the long time dynamics.</li>
+<li><p>The <strong>people who have been tested are mostly those who needed clinical care in hospitals</strong>. This assumption is backed up by <a class="reference external" href="https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public">government data on testing</a>: as of the 15th of April, 390,731 out of 417,649 tests were done mostly on people with a medical need in hospital and the most essential NHS workers and their families, a further detailed <a class="reference external" href="https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes">here</a>.</p></li>
+<li><p>The <strong>restrictive measures that are in effect as of 11 April will be kept in place</strong> for the prediction horizon, i.e. until the end date of the prediction.</p></li>
+<li><p>Once people are <strong>tested positive and admitted into hospital, they are isolated</strong> and no longer able to transmit the infection.</p></li>
+<li><p><strong>Conditions about hospital use remain more or less constant</strong>; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.</p></li>
+<li><p>Finally, we assume that <strong>a person cannot catch the disease twice</strong>. This is still a matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would naturally make a great difference in the long time dynamics.</p></li>
 </ul>
 <p>Other assumptions are explained in the <a class="reference internal" href="Model.html#model"><span class="std std-ref">Epidemic model</span></a>.</p>
 </div>
@@ -77,10 +76,10 @@
 <h3>3. Are we sure our prediction is correct? Are there any caveats?<a class="headerlink" href="#are-we-sure-our-prediction-is-correct-are-there-any-caveats" title="Permalink to this headline">¶</a></h3>
 <p>Of course we are <strong>not</strong> sure it is correct; nobody can predict the future and, moreover, every model is a simplification of reality. However, models may be useful to have a better understanding of possible outcomes of some phenomena, given some conditions. Therefore, you need to take into account that:</p>
 <ul class="simple">
-<li>The predictions of this model are based on a number of assumptions, and if in reality these assumptions are not satisfied (e.g. that restrictive measures will be kept in place for the prediction horizon), the forecast will most likely be invalidated.</li>
-<li>Our predictions contain an uncertainty range, but what that uncertainty means is hard to understand (as discussed <span class="xref std std-ref">here</span>).</li>
-<li>The predictions eventually rely on the accuracy of the data the model was provided with; in emergency settings like this, data is a partial observation of reality. Our model tries to take that into account to an extent (for instance we explicitly assume that all confirmed cases were diagnosed in hospitalised people, which has been mostly true until testing of NHS workers was started), but of course it cannot do so perfectly.</li>
-<li>As said above, every model is a simplification of reality, and this is clearly an extreme simplification, as it describes the whole population in England as if it was a well-mixed fluid, so that every person can interact with anyone else with the same probability. This is of course not the case, but models which describe reality in more detail are harder to handle and fit to the data. Moreover, this kind of well-mixed models are quite commonly applied in epidemics settings, and they have shown to have a fair amount of predictive power, when the considered populations are large. We hope that this is the case for the present setting as well.</li>
+<li><p>The predictions of this model are based on a number of assumptions, and if in reality these assumptions are not satisfied (e.g. that restrictive measures will be kept in place for the prediction horizon), the forecast will most likely be invalidated.</p></li>
+<li><p>Our predictions contain an uncertainty range, but what that uncertainty means is hard to understand (as discussed <a class="reference internal" href="#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">here</span></a>).</p></li>
+<li><p>The predictions eventually rely on the accuracy of the data the model was provided with; in emergency settings like this, data is a partial observation of reality. Our model tries to take that into account to an extent (for instance we explicitly assume that all confirmed cases were diagnosed in hospitalised people, which has been mostly true until testing of NHS workers was started), but of course it cannot do so perfectly.</p></li>
+<li><p>As said above, every model is a simplification of reality, and this is clearly an extreme simplification, as it describes the whole population in England as if it was a well-mixed fluid, so that every person can interact with anyone else with the same probability. This is of course not the case, but models which describe reality in more detail are harder to handle and fit to the data. Moreover, this kind of well-mixed models are quite commonly applied in epidemics settings, and they have shown to have a fair amount of predictive power, when the considered populations are large. We hope that this is the case for the present setting as well.</p></li>
 </ul>
 </div>
 <div class="section" id="what-do-we-mean-by-uncertainty-in-this-model">
@@ -127,17 +126,15 @@ The uncertainty is due to the fact that in this model we do not estimate the exa
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -146,7 +143,7 @@ The uncertainty is due to the fact that in this model we do not estimate the exa
       &copy;2020, Lorenzo Pacchiardi and Ritabrata Dutta.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
