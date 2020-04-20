@@ -29,17 +29,17 @@ To know more about this research project, please contact Dr. Ritabrata Dutta at 
 **************************************************************
 Questions about the first phase of the project
 **************************************************************
-
-1. What are the most important conclusions based on your model?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks. 
-- According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June. 
-- As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people.
-
-Note: these conclusions have last been updated on 20 April 2020. 
-
-2. How does our model differ from others that predict the spread of COVID-19?
+.. 
+    1. What are the most important conclusions based on your model?
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    - According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks. 
+    - According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June. 
+    - As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people.
+    
+    Note: these conclusions have last been updated on 20 April 2020. 
+    
+1. How does our model differ from others that predict the spread of COVID-19?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The greatest difference with other models we are aware of is that they use global estimates on how the epidemic spreads (eg. how many days it takes for a person to start showing symptoms once infected, or how many days between being diagnosed and death) whereas we have used data on the spread of COVID-19 in England to **learn the values of these parameters as they apply specifically to England**. Using :ref:`our method <Inference>`, these parameters can be learnt from local data anywhere, and used to create accurate local predictions. To compute these estimates, we have used a software called `ABCpy <https://github.com/eth-cscs/abcpy>`_.
@@ -50,7 +50,7 @@ Our model is an extension of recent models by `Adam Kucharski et al. <https://ww
 
 We are happy to hear suggestions to improve our model; please see :ref:`here <2. How can I get in touch with the researchers behind this study?>` for contact information.
 
-3. What assumptions have been made in this model?
+2. What assumptions have been made in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Five main assumptions we have used to develop our epidemic model are:
@@ -63,7 +63,7 @@ Five main assumptions we have used to develop our epidemic model are:
 
 Other assumptions are explained in the :ref:`Epidemic model <Model>`.
 
-4. Are we sure our prediction is correct? Are there any caveats?
+3. Are we sure our prediction is correct? Are there any caveats?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Of course we are **not** sure it is correct; nobody can predict the future and, moreover, every model is a simplification of reality. However, models may be useful to have a better understanding of possible outcomes of some phenomena, given some conditions. Therefore, you need to take into account that:
@@ -73,7 +73,7 @@ Of course we are **not** sure it is correct; nobody can predict the future and, 
 - The predictions eventually rely on the accuracy of the data the model was provided with; in emergency settings like this, data is a partial observation of reality. Our model tries to take that into account to an extent (for instance we explicitly assume that all confirmed cases were diagnosed in hospitalised people, which has been mostly true until testing of NHS workers was started), but of course it cannot do so perfectly.
 - As said above, every model is a simplification of reality, and this is clearly an extreme simplification, as it describes the whole population in England as if it was a well-mixed fluid, so that every person can interact with anyone else with the same probability. This is of course not the case, but models which describe reality in more detail are harder to handle and fit to the data. Moreover, this kind of well-mixed models are quite commonly applied in epidemics settings, and they have shown to have a fair amount of predictive power, when the considered populations are large. We hope that this is the case for the present setting as well.
 
-5. What do we mean by uncertainty in this model?
+4. What do we mean by uncertainty in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The uncertainty of our prediction is the orange shaded area in each graph, which means that the actual value (e.g. of daily deaths) will be within the orange range with 95 percent probability. 

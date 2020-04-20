@@ -21,15 +21,14 @@ Prediction of the cumulative total number of infected people who are diagnosed (
 
         .. image:: img/daily_confirmed.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
-        
+
+..         
     .. tab-container:: tab3
         :title: Infectious people
-
         .. image:: img/total_number_infectious.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <5. What do we mean by uncertainty in this model?>`)
-
         We predict the number of infectious people for each day using our model. The uncertainty in our prediction here is very high as we do not have real data about this number. The y axis here has to be multiplied by :math:`10^7`.
-
+    
 The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
 
 Number of deaths in hospital
@@ -98,30 +97,27 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
 .. content-tabs::
 
     .. tab-container:: tab1
-        :title: Need of hospitalization 
-
-        .. image:: img/prob_hospitalisation.png
-        The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
-
-    .. tab-container:: tab2
         :title: Death
 
         .. image:: img/prob_deceasing.png
+        The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
 
+..
+    .. tab-container:: tab2
+        :title: Death
+        .. image:: img/prob_deceasing.png
         The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
 
 .. Evolution of :math:`R_0` during the pandemic
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     From our estimate of the parameters, we can estimate :math:`R_0`, ie the basic reproduction number, for this pandemic.
 
-**Main Conclusions**: (Last updated on 20 April 2020.)
-
-- According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks. 
-
-- According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June. 
-
-- As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people. 
-
+.. 
+    **Main Conclusions**: (Last updated on 20 April 2020.)
+    - According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks. 
+    - According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June. 
+    - As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people. 
+    
 **Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
 
 - Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the "pillar 1" category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_

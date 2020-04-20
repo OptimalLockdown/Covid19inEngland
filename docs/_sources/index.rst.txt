@@ -6,6 +6,8 @@
 COVID-19 in England
 ===================
 The aim of this project is to predict daily evolution of COVID-19 pandemic in England to help policy makers and create a public discourse about transparent science at the time of crisis, based on cutting edge epidemic models calibrated on daily number of infected and deaths (age-structured).
+
+(**Work in Progress**)
        
 
 .. toctree::
