@@ -42,7 +42,7 @@ Note: these conclusions have last been updated on 20 April 2020.
 2. How does our model differ from others that predict the spread of COVID-19?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The greatest difference with other models we are aware of is that they use global estimates on how the epidemic spreads (eg. how many days it takes for a person to start showing symptoms once infected, or how many days between being diagnosed and death) whereas we have used data on the spread of COVID-19 in England to **learn the values of these parameters as they apply specifically to England**. Using  :ref:`our method <Likelihood-free inference>`, these parameters can be learnt from local data anywhere, and used to create accurate local predictions. To compute these estimates, we have used a software called `ABCpy <https://github.com/eth-cscs/abcpy>`_. 
+The greatest difference with other models we are aware of is that they use global estimates on how the epidemic spreads (eg. how many days it takes for a person to start showing symptoms once infected, or how many days between being diagnosed and death) whereas we have used data on the spread of COVID-19 in England to **learn the values of these parameters as they apply specifically to England**. Using :ref:`our method <Inference>`, these parameters can be learnt from local data anywhere, and used to create accurate local predictions. To compute these estimates, we have used a software called `ABCpy <https://github.com/eth-cscs/abcpy>`_.
  
 Second, as the prediction is based on **real local data, it can and will be updated regularly**, and it thus reflects the current situation in England as accurately as possible. 
 
