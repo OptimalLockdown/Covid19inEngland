@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Likelihood-free inference &#8212; covid  documentation</title>
+    <title>Inference &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -17,8 +17,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Questions and Answers (for public and media)" href="FAQ.html" />
-    <link rel="prev" title="Details of Data" href="Data.html" />
+    <link rel="next" title="Questions and Answers (for the public and media)" href="FAQ.html" />
+    <link rel="prev" title="Public Data Sources" href="Data.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,29 +35,25 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="likelihood-free-inference">
-<span id="inference"></span><h1>Likelihood-free inference<a class="headerlink" href="#likelihood-free-inference" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="inference">
+<span id="id1"></span><h1>Inference<a class="headerlink" href="#inference" title="Permalink to this headline">¶</a></h1>
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
 <p class="tab-title">Approximate Bayesian computation</p>
-<p>We use Approximate Bayesian Computation as an inference scheme to fit the parameter values. This allows us to fix a prior range for the parameters, and to obtain an uncertainty range in the prediction.  This inference scheme essentially works by looking for a value of the parameters which best approximates the observations. The fundamental ABC rejection sampling scheme iterates the following steps:</p>
+<p>Here we use approximate Bayesian computation (ABC) to calibrate the epidemic model based on daily number of confirmed infected individuals and deceased individuals in the UK. ABC allows us to fix a prior range for the parameters and uncertainty on them (defined by prior distribution <span class="math notranslate nohighlight">\(\pi(\theta)\)</span>), and to obtain an uncertainty range in the prediction.  This inference scheme essentially works by looking for a value of the parameters which best approximates the observations. The fundamental ABC rejection sampling scheme iterates the following steps:</p>
 <ul class="simple">
 <li><p>Draw <span class="math notranslate nohighlight">\(\theta\)</span> from the prior <span class="math notranslate nohighlight">\(\pi(\theta)\)</span>.</p></li>
-<li><p>Simulate a synthetic dataset <span class="math notranslate nohighlight">\(\mathbf{x}_{sim}\)</span> from the simulator-based model <span class="math notranslate nohighlight">\(\mathbb{M}(\theta)\)</span>.</p></li>
-<li><p>Accept the parameter value <span class="math notranslate nohighlight">\(\theta\)</span> if <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs}) &lt; \epsilon\)</span>. Otherwise, reject <span class="math notranslate nohighlight">\(\theta\)</span>.</p></li>
+<li><p>Simulate a synthetic dataset <span class="math notranslate nohighlight">\(\mathbf{x}^{sim}\)</span> from the simulator-based model <span class="math notranslate nohighlight">\(\mathcal{M}(\theta)\)</span>.</p></li>
+<li><p>Accept the parameter value <span class="math notranslate nohighlight">\(\theta\)</span> if <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}) &lt; \epsilon\)</span>. Otherwise, reject <span class="math notranslate nohighlight">\(\theta\)</span>.</p></li>
 </ul>
-<dl class="field-list simple">
-<dt class="field-odd">download</dt>
-<dd class="field-odd"><p>ABC_rejection.pdf</p>
-</dd>
-</dl>
-<p>Here, the metric on the dataspace <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs})\)</span> measures the closeness between <span class="math notranslate nohighlight">\(\mathbf{x}_{sim}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}_{obs}\)</span>. The accepted <span class="math notranslate nohighlight">\((\theta,\mathbf{x}_{sim})\)</span> pairs are thus jointly sampled from a distribution proportional to <span class="math notranslate nohighlight">\(\pi(\theta)p_{\mathbf{d},\epsilon}(\mathbf{x}_{obs}|\theta)\)</span>, where <span class="math notranslate nohighlight">\(p_{\mathbf{d},\epsilon}(\mathbf{x}_{obs}|\theta)\)</span> is an approximation to the likelihood function <span class="math notranslate nohighlight">\(p(\mathbf{x}_{obs}|\theta)\)</span></p>
-<p><span class="math notranslate nohighlight">\(p_{\mathbf{d}, \epsilon}(\mathbf{x}_{obs}|\theta) = \int p(\mathbf{x}_{sim}|\theta) \mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs}))  d\mathbf{x}_{sim}\)</span>,</p>
-<p>where <span class="math notranslate nohighlight">\(\mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs}))\)</span> is in this case a probability density function proportional to <span class="math notranslate nohighlight">\(\mathbb{1}{(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs})&lt;\epsilon)}\)</span>. Besides this choice for <span class="math notranslate nohighlight">\(\mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs}))\)</span>, that has been exploited in several ABC algorithms (for instance cite{beaumont:2010, drovandi2011estimation, del:2012, lenormand2013adaptive}), ABC algorithms relying on different choices exist, for instance being proportional to <span class="math notranslate nohighlight">\(\exp(-\mathbf{d}(\mathbf{x}_{sim},\mathbf{x}_{obs})/\epsilon)\)</span> in simulated-annealing ABC (SABC) citep{Albert_2015}. In general, <span class="math notranslate nohighlight">\(\mathbb{K}_{\epsilon}(\cdot)\)</span> needs to be a probability density function with a large concentration of mass near 0, in which the parameter <span class="math notranslate nohighlight">\(\epsilon\)</span> denotes the amount of concentration (the smaller <span class="math notranslate nohighlight">\(\epsilon\)</span>, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when <span class="math notranslate nohighlight">\(\epsilon \to 0\)</span>. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted.</p>
+<img alt="_images/ABC_rejection.png" src="_images/ABC_rejection.png" />
+<p>Here, the metric on the dataspace <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\)</span> measures the closeness between <span class="math notranslate nohighlight">\(\mathbf{x}^{sim}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}^{obs}\)</span>. The accepted <span class="math notranslate nohighlight">\((\theta,\mathbf{x}^{sim})\)</span> pairs are thus jointly sampled from a distribution proportional to <span class="math notranslate nohighlight">\(\pi(\theta)p_{\mathbf{d},\epsilon}(\mathbf{x}^{obs}|\theta)\)</span>, where <span class="math notranslate nohighlight">\(p_{\mathbf{d},\epsilon}(\mathbf{x}^{obs}|\theta)\)</span> is an approximation to the intractable likelihood function <span class="math notranslate nohighlight">\(p(\mathbf{x}^{obs}|\theta)\)</span></p>
+<p class="centered">
+<strong><span class="math notranslate nohighlight">\(p_{\mathbf{d}, \epsilon}(\mathbf{x}^{obs}|\theta) = \int p(\mathbf{x}^{sim}|\theta) \mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}))  d\mathbf{x}^{sim}\)</span></strong></p><p>proportional to <span class="math notranslate nohighlight">\(P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\epsilon)\)</span>. In general, <span class="math notranslate nohighlight">\(\mathbb{K}_{\epsilon}(\cdot)\)</span> needs to be a probability density function with a large concentration of mass near 0, in which the parameter <span class="math notranslate nohighlight">\(\epsilon\)</span> denotes the amount of concentration (the smaller <span class="math notranslate nohighlight">\(\epsilon\)</span>, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when <span class="math notranslate nohighlight">\(\epsilon \to 0\)</span>. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High Performance Computing in <a class="reference external" href="https://github.com/eth-cscs/abcpy">ABCpy</a>.</p>
 </div>
 <div class="tab-content docutils container" id="tab-tab2">
 <p class="tab-title">ABCpy</p>
-<p>For this work we use <a class="reference external" href="https://github.com/eth-cscs/abcpy/tree/master/abcpy">ABCpy</a> scientific library written in Python for Bayesian uncertainty quantification in absence of likelihood function, which parallelizes existing approximate Bayesian computation (ABC) algorithms and other likelihood-free inference schemes efficiently using High performance computing.</p>
+<p>For this work we use the <a class="reference external" href="https://github.com/eth-cscs/abcpy">ABCpy</a> scientific library written in Python for Bayesian uncertainty quantification in absence of likelihood function, which parallelizes efficient approximate Bayesian computation (ABC) algorithms and other likelihood-free inference schemes efficiently using High Performance Computing.</p>
 </div>
 </div>
 </div>
@@ -69,7 +65,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">covid</a></h1>
+<h1 class="logo"><a href="index.html">COVID-19 in England</a></h1>
 
 
 
@@ -79,33 +75,20 @@
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Prediction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Prediction.html">Prediction (updated daily)</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Epidemic Models</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Model.html">Epidemic Models</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Public Data Sources</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Data.html">Details of Data</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Inference: ABC</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Likelihood-free inference</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Q&amp;A</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions and Answers (for public and media)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Prediction.html">Predictions for England (Updated on 11th April)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Model.html">Epidemic Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data.html">Public Data Sources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions and Answers (for the public and media)</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="Data.html" title="previous chapter">Details of Data</a></li>
-      <li>Next: <a href="FAQ.html" title="next chapter">Questions and Answers (for public and media)</a></li>
+      <li>Previous: <a href="Data.html" title="previous chapter">Public Data Sources</a></li>
+      <li>Next: <a href="FAQ.html" title="next chapter">Questions and Answers (for the public and media)</a></li>
   </ul></li>
 </ul>
 </div>
@@ -119,20 +102,12 @@
     </div>
 </div>
 <script>$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2017, Author.
+      &copy;2020, Lorenzo Pacchiardi and Ritabrata Dutta.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
