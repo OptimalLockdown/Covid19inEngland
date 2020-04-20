@@ -79,10 +79,8 @@ Of course we are **not** sure it is correct; nobody can predict the future and, 
 The uncertainty of our prediction is the orange shaded area in each graph, which means that the actual value (e.g. of daily deaths) will be within the orange range with 95 percent probability. 
 The uncertainty is due to the fact that in this model we do not estimate the exact values of the parameters of the model (e.g. how many days it takes for a person to start showing symptoms once infected, or how many days between being diagnosed and death). Instead we estimate the probabilities of different possible values being the correct one. This is a central element of the Bayesian paradigm of statistics. 
 
-This uncertainty can be thought of as arising from two different aspects:
+This uncertainty can be thought of as arising due to our inability to describe the reality perfectly by our (deterministic) model, for any choice of the values of the parameters; this is called a misspecified model. Therefore, there could be several choices of the values of the parameters which approximate the truth in a similar way.
 
-- It may be the case that the reality cannot be described perfectly by our (deterministic) model, for any choice of the values of the parameters; this is called a misspecified model. Therefore, there could be several choices of the values of the parameters which approximate the truth in a similar way.
-
-- Moreover, the :ref:`inference scheme <Inference>` we use is approximate: it gives us a blur of the true parameter distribution. As discussed in `Wilkinson (2008) <https://www.degruyter.com/view/journals/sagmb/12/2/article-p129.xml>`_, this corresponds to assuming some noise structure on the observation on which the model is fit; it is probably the case that the data is not perfect, but understanding the quantity of noise present in it is a hard issue as well.
+.. - Moreover, the :ref:`inference scheme <Inference>` we use is approximate: it gives us a blur of the true parameter distribution. As discussed in `Wilkinson (2008) <https://www.degruyter.com/view/journals/sagmb/12/2/article-p129.xml>`_, this corresponds to assuming some noise structure on the observation on which the model is fit; it is probably the case that the data is not perfect, but understanding the quantity of noise present in it is a hard issue as well.
 
 Overall, it is hard to be sure that this uncertainty is calibrated, namely that it actually describes the underlying probability of the parameters.
