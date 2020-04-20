@@ -17,7 +17,7 @@ In the first phase - visible as of 20th April 2020 on this website - we have dev
 
 In the second phase, this model will be improved by integrating data about commuting patterns in England. 
 
-In the third phase of the project, we will use these models to **design an optimal lockdown for England** (e.g., what commuting routes to allow, what retail to close, etc.) and **how to exit lockdown** (what and when to reopen). The exit strategy will be updated daily based on the latest data available. 
+In the third phase of the project, `Dr. Susana Gomes <https://warwick.ac.uk/fac/sci/maths/people/staff/gomes/>`_ (Dept. of Mathematics, University of Warwick) and `Dr. Dante Kalise <https://sites.google.com/view/dkalise>`_ (School of Mathematical Sciences, University of Nottingham) will use these models to **design an optimal lockdown for England** (e.g., what commuting routes to allow, what retail to close, etc.) and **how to exit lockdown** (what and when to reopen). The exit strategy will be updated daily based on the latest data available. 
 
 We use data on the spread of COVID-19 in England provided by Public Health England (PHE), the National Health Service (NHS) and the Office for National Statistics (ONS). We also integrate `Google mobility data <https://www.google.com/covid19/mobility/>`_ in our model to reflect the effect of the current lockdown on the English population. We will also add data about commuting patterns in England based on the 2011 census data. Check our page on our data sources in more detail here. 
 

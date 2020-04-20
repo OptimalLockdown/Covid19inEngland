@@ -295,7 +295,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'covid.tex', 'covid Documentation',
-     'Author', 'manual'),
+     'Lorenzo Pacchiardi and Ritabrata Dutta', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -359,10 +359,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
-epub_author = author
-epub_publisher = author
-epub_copyright = copyright
+epub_title = 'COVID-19 in England'
+epub_author = 'Lorenzo Pacchiardi and Ritabrata Dutta'
+epub_publisher = 'Lorenzo Pacchiardi and Ritabrata Dutta'
+epub_copyright = 'BSD 3-clause license'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = project
