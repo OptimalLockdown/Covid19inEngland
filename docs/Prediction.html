@@ -1,20 +1,21 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Predictions for England (Updated on 11th April) &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/contentui.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/contentui.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Epidemic Model" href="Model.html" />
@@ -125,17 +126,17 @@
 </div>
 <p><strong>Main Conclusions</strong>: (Last updated on 20 April 2020.)</p>
 <ul class="simple">
-<li><p>According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks.</p></li>
-<li><p>According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June.</p></li>
-<li><p>As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people.</p></li>
+<li>According to our model, we are currently (April 20) crossing the peak of the number of COVID-19 deaths per day in hospitals in England. However, sadly, a large number of people will still die in the next seven weeks.</li>
+<li>According to our model (as of April 20), assuming the current lockdown measures are extended until early June and the population continues to comply with them, the number of daily COVID-19 deaths in hospitals in England will reduce to nil by the first week of June.</li>
+<li>As has been concluded by other studies, we also found that older people had a significantly higher probability of needing hospitalization and of dying compared to younger people.</li>
 </ul>
 <p><strong>Assumptions</strong>: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:</p>
 <ul class="simple">
-<li><p>Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on <a class="reference external" href="https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public">this government webpage</a> which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the “pillar 1” category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed <a class="reference external" href="https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes">here</a></p></li>
-<li><p>Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government <a class="reference external" href="https://www.bbc.com/news/uk-52313715">announced</a> that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.</p></li>
-<li><p>Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.</p></li>
-<li><p>Conditions about hospital use remain more or less constants; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.</p></li>
-<li><p>Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.</p></li>
+<li>Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on <a class="reference external" href="https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public">this government webpage</a> which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the “pillar 1” category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed <a class="reference external" href="https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes">here</a></li>
+<li>Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government <a class="reference external" href="https://www.bbc.com/news/uk-52313715">announced</a> that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.</li>
+<li>Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.</li>
+<li>Conditions about hospital use remain more or less constants; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.</li>
+<li>Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.</li>
 </ul>
 <p>For more details please check <a class="reference internal" href="Model.html#model"><span class="std std-ref">Epidemic model</span></a>, <a class="reference internal" href="Inference.html#inference"><span class="std std-ref">approximate Bayesian computation</span></a> and <a class="reference internal" href="Data.html#data"><span class="std std-ref">Data sources</span></a>.</p>
 </div>
@@ -176,15 +177,17 @@
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -193,7 +196,7 @@
       &copy;2020, Lorenzo Pacchiardi and Ritabrata Dutta.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

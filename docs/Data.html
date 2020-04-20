@@ -1,23 +1,24 @@
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Public Data Sources &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/contentui.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/contentui.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Likelihood-free inference" href="Inference.html" />
+    <link rel="next" title="Inference" href="Inference.html" />
     <link rel="prev" title="Epidemic Model" href="Model.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -42,9 +43,9 @@
 <div class="tab-content docutils container" id="tab-tab1">
 <p class="tab-title">NHS/UK Government</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/">NHS England</a> reports daily deaths with age group in 20-years bands happening in hospitals; deaths are referred to actual occurrence date, not to report date.</p></li>
-<li><p><a class="reference external" href="https://coronavirus.data.gov.uk/">UK Government website</a> reports daily overall number positive and deaths, with no age information but with geographical location. Presently, we neglected the location information, but we plan to use that in our future metapopulation model. Here as well, dates are referred to specimen/death date.</p></li>
-<li><p><a class="reference external" href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">ONS data on UK population</a>, mid-2018 estimate (most recent available); this reports details on age distribution of UK population, besides many more information (for instance geographical distribution).</p></li>
+<li><a class="reference external" href="https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/">NHS England</a> reports daily deaths with age group in 20-years bands happening in hospitals; deaths are referred to actual occurrence date, not to report date.</li>
+<li><a class="reference external" href="https://coronavirus.data.gov.uk/">UK Government website</a> reports daily overall number positive and deaths, with no age information but with geographical location. Presently, we neglected the location information, but we plan to use that in our future metapopulation model. Here as well, dates are referred to specimen/death date.</li>
+<li><a class="reference external" href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">ONS data on UK population</a>, mid-2018 estimate (most recent available); this reports details on age distribution of UK population, besides many more information (for instance geographical distribution).</li>
 </ul>
 </div>
 <div class="tab-content docutils container" id="tab-tab2">
@@ -83,7 +84,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Prediction.html">Predictions for England (Updated on 11th April)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Model.html">Epidemic Model</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Public Data Sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Inference.html">Likelihood-free inference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Inference.html">Inference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FAQ.html">Questions and Answers (for the public and media)</a></li>
 </ul>
 
@@ -92,20 +93,22 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="Model.html" title="previous chapter">Epidemic Model</a></li>
-      <li>Next: <a href="Inference.html" title="next chapter">Likelihood-free inference</a></li>
+      <li>Next: <a href="Inference.html" title="next chapter">Inference</a></li>
   </ul></li>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3>Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" />
       <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -114,7 +117,7 @@
       &copy;2020, Lorenzo Pacchiardi and Ritabrata Dutta.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
