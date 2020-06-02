@@ -97,7 +97,7 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
 .. content-tabs::
 
     .. tab-container:: tab1
-        :title: Death
+        :title: Death in hospital
 
         .. image:: img/prob_deceasing.png
         The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
