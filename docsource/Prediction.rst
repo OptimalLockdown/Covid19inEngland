@@ -85,7 +85,7 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
 
 
     .. tab-container:: tab2
-        :title: Death
+        :title: Death in hospital
 
         .. image:: img/violinplot_rho_prime.png
 
