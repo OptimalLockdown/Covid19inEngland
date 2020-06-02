@@ -1,35 +1,17 @@
 .. _Prediction:
 
-Predictions for England (Updated on 11th April)
-================================================
+Inference results for England (Updated on 23rd May)
+===================================================
 
 
-Number of infected
+Hospitalized people
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), the daily number of new diagnoses, the number of infectious people. 
+Predicted number of hospitalized people vs. actual number.
 
-.. content-tabs::
-
-    .. tab-container:: tab1
-        :title: Infected & Hospitalized
-
-        .. image:: img/cumulative_confirmed.png
+        .. image:: img/daily_Ic_total.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
-    .. tab-container:: tab2
-        :title: Daily new diagnoses
-
-        .. image:: img/daily_confirmed.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
-
-..         
-    .. tab-container:: tab3
-        :title: Infectious people
-        .. image:: img/total_number_infectious.png
-        .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
-        We predict the number of infectious people for each day using our model. The uncertainty in our prediction here is very high as we do not have real data about this number. The y axis here has to be multiplied by :math:`10^7`.
-    
-The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.
+The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (23rd May).
 
 Number of deaths in hospital
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,19 +22,17 @@ Prediction of the number of deaths in hospital per day and total number of death
     .. tab-container:: tab1
         :title: Deaths per day 
 
-        .. image:: img/total_deaths_per_day.png
+        .. image:: img/daily_deceased_total.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
-
-        According to this model, we are right now close at the peak of number of deaths per day.
 
 
     .. tab-container:: tab2
         :title: Total deaths
 
-        .. image:: img/total_deaths.png
+        .. image:: img/cumulative_deceased_total.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
-The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we've done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.
+The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (23rd May). Note that deaths are considered by the date they actually happened, not by reporting date.
 
 Deaths in hospital in each age group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -63,49 +43,52 @@ Prediction of total number of deaths in the 5 age groups: :math:`0-19,   20-39, 
     .. tab-container:: tab1
         :title:  0-19
         
-        .. image:: img/total_deaths_age_group_0.png
+        .. image:: img/daily_deaths_age_group_1.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab2
         :title:  20-39
         
-        .. image:: img/total_deaths_age_group_1.png
+        .. image:: img/daily_deaths_age_group_2.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab3
         :title:  40-59
         
-        .. image:: img/total_deaths_age_group_2.png
+        .. image:: img/daily_deaths_age_group_3.png
 
 
     .. tab-container:: tab4
         :title:  60-79
         
-        .. image:: img/total_deaths_age_group_3.png
+        .. image:: img/daily_deaths_age_group_4.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
     .. tab-container:: tab5
         :title:  80+
         
-        .. image:: img/total_deaths_age_group_4.png
+        .. image:: img/daily_deaths_age_group_5.png
         .. centered:: (Orange shaded area indicates :ref:`uncertainty <4. What do we mean by uncertainty in this model?>`)
 
 Age-specific probabilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-From our model, we estimate two age-dependent probabilities of (a) needing hospitalization when infected and (b) death when confirmed positive; we remark again that diagnosis happen in most part when people need clinical care in hospital.
+From our model, we estimate two age-dependent probabilities of (a) needing hospitalization when infected and (b) death when hospitalized.
 
 .. content-tabs::
 
     .. tab-container:: tab1
-        :title: Death
+        :title: Hospitalization
 
-        .. image:: img/prob_deceasing.png
+        .. image:: img/violinplot_rho.png
+
         The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
 
-..
+
     .. tab-container:: tab2
         :title: Death
-        .. image:: img/prob_deceasing.png
+
+        .. image:: img/violinplot_rho_prime.png
+
         The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.
 
 .. Evolution of :math:`R_0` during the pandemic
@@ -120,10 +103,11 @@ From our model, we estimate two age-dependent probabilities of (a) needing hospi
     
 **Assumptions**: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:
 
-- Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the "pillar 1" category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_
+..
+    - Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on `this government webpage <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_ which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the "pillar 1" category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_
 
 
-- Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government `announced <https://www.bbc.com/news/uk-52313715>`_ that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.
+- Restrictive measures as of the 23rd May will be kept in place for the prediction horizon.
 
 - Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.
 

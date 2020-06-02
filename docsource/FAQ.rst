@@ -53,11 +53,13 @@ We are happy to hear suggestions to improve our model; please see :ref:`here <2.
 2. What assumptions have been made in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Five main assumptions we have used to develop our epidemic model are:
+Four main assumptions we have used to develop our epidemic model are:
 
-- The **people who have been tested are mostly those who needed clinical care in hospitals**. This assumption is backed up by `government data on testing <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_: as of the 15th of April, 390,731 out of 417,649 tests were done mostly on people with a medical need in hospital and the most essential NHS workers and their families, a further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_.
-- The **restrictive measures that are in effect as of 11 April will be kept in place** for the prediction horizon, i.e. until the end date of the prediction. 
-- Once people are **tested positive and admitted into hospital, they are isolated** and no longer able to transmit the infection. 
+..
+   - The **people who have been tested are mostly those who needed clinical care in hospitals**. This assumption is backed up by `government data on testing <https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public>`_: as of the 15th of April, 390,731 out of 417,649 tests were done mostly on people with a medical need in hospital and the most essential NHS workers and their families, a further detailed `here <https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes>`_.
+
+- The **restrictive measures that are in effect as of 23 May will be kept in place** for the prediction horizon, i.e. until the end date of the prediction.
+- Once people are **tested positive and admitted into hospital, they are isolated** and no longer able to transmit the infection.
 - **Conditions about hospital use remain more or less constant**; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.
 - Finally, we assume that **a person cannot catch the disease twice**. This is still a matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would naturally make a great difference in the long time dynamics.
 
