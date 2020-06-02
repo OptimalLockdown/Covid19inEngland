@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Predictions for England (Updated on 11th April) &#8212; COVID-19 in England  documentation</title>
+    <title>Inference results for England (Updated on 23rd May) &#8212; COVID-19 in England  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -35,24 +35,16 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="predictions-for-england-updated-on-11th-april">
-<span id="prediction"></span><h1>Predictions for England (Updated on 11th April)<a class="headerlink" href="#predictions-for-england-updated-on-11th-april" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="number-of-infected">
-<h2>Number of infected<a class="headerlink" href="#number-of-infected" title="Permalink to this headline">¶</a></h2>
-<p>Prediction of the cumulative total number of infected people who are diagnosed (most of them needing hospitalisation), the daily number of new diagnoses, the number of infectious people.</p>
-<div class="content-tabs docutils container">
-<div class="tab-content docutils container" id="tab-tab1">
-<p class="tab-title">Infected &amp; Hospitalized</p>
-<img alt="_images/cumulative_confirmed.png" src="_images/cumulative_confirmed.png" />
+  <div class="section" id="inference-results-for-england-updated-on-23rd-may">
+<span id="prediction"></span><h1>Inference results for England (Updated on 23rd May)<a class="headerlink" href="#inference-results-for-england-updated-on-23rd-may" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hospitalized-people">
+<h2>Hospitalized people<a class="headerlink" href="#hospitalized-people" title="Permalink to this headline">¶</a></h2>
+<p>Predicted number of hospitalized people vs. actual number.</p>
+<blockquote>
+<div><img alt="_images/daily_Ic_total.png" src="_images/daily_Ic_total.png" />
 <p class="centered">
-<strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
-<div class="tab-content docutils container" id="tab-tab2">
-<p class="tab-title">Daily new diagnoses</p>
-<img alt="_images/daily_confirmed.png" src="_images/daily_confirmed.png" />
-<p class="centered">
-<strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
-</div>
-<p>The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we’ve done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality.</p>
+<strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div></blockquote>
+<p>The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (23rd May).</p>
 </div>
 <div class="section" id="number-of-deaths-in-hospital">
 <h2>Number of deaths in hospital<a class="headerlink" href="#number-of-deaths-in-hospital" title="Permalink to this headline">¶</a></h2>
@@ -60,17 +52,16 @@
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
 <p class="tab-title">Deaths per day</p>
-<img alt="_images/total_deaths_per_day.png" src="_images/total_deaths_per_day.png" />
+<img alt="_images/daily_deceased_total.png" src="_images/daily_deceased_total.png" />
 <p class="centered">
-<strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p><p>According to this model, we are right now close at the peak of number of deaths per day.</p>
-</div>
+<strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 <div class="tab-content docutils container" id="tab-tab2">
 <p class="tab-title">Total deaths</p>
-<img alt="_images/total_deaths.png" src="_images/total_deaths.png" />
+<img alt="_images/cumulative_deceased_total.png" src="_images/cumulative_deceased_total.png" />
 <p class="centered">
 <strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 </div>
-<p>The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (11th April); after we’ve done the fit, data until the 13th became available, so we plot those as well, in order to check how our predictions match reality. Note that deaths are considered by the date they actually happened, not by reporting date; this is why we are not able to use data more recent than 5 days ago, as reporting takes some time.</p>
+<p>The dotted vertical line denotes the observation horizon, the day up to which the observed data was used for fitting the model (23rd May). Note that deaths are considered by the date they actually happened, not by reporting date.</p>
 </div>
 <div class="section" id="deaths-in-hospital-in-each-age-group">
 <h2>Deaths in hospital in each age group<a class="headerlink" href="#deaths-in-hospital-in-each-age-group" title="Permalink to this headline">¶</a></h2>
@@ -78,44 +69,48 @@
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
 <p class="tab-title">0-19</p>
-<img alt="_images/total_deaths_age_group_0.png" src="_images/total_deaths_age_group_0.png" />
+<img alt="_images/daily_deaths_age_group_1.png" src="_images/daily_deaths_age_group_1.png" />
 <p class="centered">
 <strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 <div class="tab-content docutils container" id="tab-tab2">
 <p class="tab-title">20-39</p>
-<img alt="_images/total_deaths_age_group_1.png" src="_images/total_deaths_age_group_1.png" />
+<img alt="_images/daily_deaths_age_group_2.png" src="_images/daily_deaths_age_group_2.png" />
 <p class="centered">
 <strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 <div class="tab-content docutils container" id="tab-tab3">
 <p class="tab-title">40-59</p>
-<img alt="_images/total_deaths_age_group_2.png" src="_images/total_deaths_age_group_2.png" />
+<img alt="_images/daily_deaths_age_group_3.png" src="_images/daily_deaths_age_group_3.png" />
 </div>
 <div class="tab-content docutils container" id="tab-tab4">
 <p class="tab-title">60-79</p>
-<img alt="_images/total_deaths_age_group_3.png" src="_images/total_deaths_age_group_3.png" />
+<img alt="_images/daily_deaths_age_group_4.png" src="_images/daily_deaths_age_group_4.png" />
 <p class="centered">
 <strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 <div class="tab-content docutils container" id="tab-tab5">
 <p class="tab-title">80+</p>
-<img alt="_images/total_deaths_age_group_4.png" src="_images/total_deaths_age_group_4.png" />
+<img alt="_images/daily_deaths_age_group_5.png" src="_images/daily_deaths_age_group_5.png" />
 <p class="centered">
 <strong>(Orange shaded area indicates <a class="reference internal" href="FAQ.html#what-do-we-mean-by-uncertainty-in-this-model"><span class="std std-ref">uncertainty</span></a>)</strong></p></div>
 </div>
 </div>
 <div class="section" id="age-specific-probabilities">
 <h2>Age-specific probabilities<a class="headerlink" href="#age-specific-probabilities" title="Permalink to this headline">¶</a></h2>
-<p>From our model, we estimate two age-dependent probabilities of (a) needing hospitalization when infected and (b) death when confirmed positive; we remark again that diagnosis happen in most part when people need clinical care in hospital.</p>
+<p>From our model, we estimate two age-dependent probabilities of (a) needing hospitalization when infected and (b) death when hospitalized.</p>
 <div class="content-tabs docutils container">
 <div class="tab-content docutils container" id="tab-tab1">
+<p class="tab-title">Hospitalization</p>
+<img alt="_images/violinplot_rho.png" src="_images/violinplot_rho.png" />
+<p>The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.</p>
+</div>
+<div class="tab-content docutils container" id="tab-tab2">
 <p class="tab-title">Death in hospital</p>
-<img alt="_images/prob_deceasing.png" src="_images/prob_deceasing.png" />
+<img alt="_images/violinplot_rho_prime.png" src="_images/violinplot_rho_prime.png" />
 <p>The horizontal line is the median prediction, while the bands width indicates the probability distribution for each value.</p>
 </div>
 </div>
 <p><strong>Assumptions</strong>: Our predictions are done under the assumption that the conditions in the UK remain the following, ie:</p>
 <ul class="simple">
-<li><p>Tested people are composed mostly of the ones which are admitted into hospital, or at least they will isolate themselves when tested positive; this is reasonable according to what said on <a class="reference external" href="https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public">this government webpage</a> which reports that, as of the 15th of April, 390,731 out of 417,649 tests were done in the “pillar 1” category, which includes mostly people with a medical need in hospitals and, whenever lab capacity allows that, the most critical NHS workers, as further detailed <a class="reference external" href="https://www.gov.uk/government/publications/coronavirus-covid-19-scaling-up-testing-programmes/coronavirus-covid-19-scaling-up-our-testing-programmes#scaling-up-our-testing-programmes">here</a></p></li>
-<li><p>Restrictive measures as of the 11th April will be kept in place for the prediction horizon; the government <a class="reference external" href="https://www.bbc.com/news/uk-52313715">announced</a> that such restrictive measures will be kept in place for at least three weeks starting from the 16th of April.</p></li>
+<li><p>Restrictive measures as of the 23rd May will be kept in place for the prediction horizon.</p></li>
 <li><p>Once people are tested positive and admitted into hospital, they are isolated, not being able anymore of transmitting the infection.</p></li>
 <li><p>Conditions about hospital use remain more or less constants; specifically, we do not explicitly model the occupation of hospital beds and ICUs, which, if saturated, can have a large impact on the death rate of the disease.</p></li>
 <li><p>Moreover, a key assumption of this model is that a person cannot catch the disease twice; this is still matter of debate; however, even if this were the case, we expect it not to change too much the dynamics of the epidemics in a first phase, in which a great part of the population is still susceptible anyway. It would of course matter a lot in the long time dynamics.</p></li>
@@ -142,7 +137,7 @@
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Predictions for England (Updated on 11th April)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Inference results for England (Updated on 23rd May)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Model.html">Epidemic Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Data.html">Public Data Sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Inference.html">Inference</a></li>
