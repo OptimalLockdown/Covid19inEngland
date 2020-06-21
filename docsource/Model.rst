@@ -17,7 +17,7 @@ Presently, we are using a compartmental model, which splits the population of En
 
         Starting with the whole population being in the :math:`S` state (except for some individuals, who are seeding the infection), any susceptible individual becomes exposed (:math:`E`) with probability :math:`\beta` for each contact with an infected one. Next our model assumes that, when a patient is hospitalized and diagnosed, it is isolated and therefore not able to spread the infection. To reflect this scenario, we assume that from the exposed state and after some incubation period, all patients will become sub-clinical :math:`I^{SC}` in which they are infectious. Afterwards some of them will recover (go to :math:`R`) and others will need clinical help (go to :math:`I^C`), reflected in a split of two categories: the ones directly recovering (:math:`I^{SC2}`) and the ones needing clinical help (:math:`I^{SC1}`). The split happens with an age-dependent probability :math:`\rho_i`. People in :math:`I^{SC1}` will go to hospital, therefore moving to the :math:`I^{C}` state; similary as before, this state is split in two categories according to the final outcome: the ones in :math:`I^{C1}` will decease (:math:`D`) after some time, while the ones in :math:`I^{SC2}` will recover (:math:`R`). The split is again described by an age-dependent probability, which we denote as :math:`\rho'_i`. The dynamics can be visualized ad follows:
 
-        .. image:: img/SEI3RD.png
+        .. image:: img/SEI4RD.png
 
         and is defined by the following ordinary differential equations (ODEs):
         
