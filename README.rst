@@ -1,6 +1,6 @@
 COVID19-epidemics-forecast-England
 ==================================
-Repository for the website describing the modeling effort and prediction for the COVID-19 epidemics in England, with the SEI3RD model.
+Repository for the website describing the modeling effort and prediction for the COVID-19 epidemics in England, with the SEI4RD model.
 
 This is fitted on data from England.
 
