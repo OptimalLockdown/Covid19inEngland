@@ -12,17 +12,17 @@ Inference
         
         - Draw :math:`\theta` from the prior :math:`\pi(\theta)`.
         - Simulate a synthetic dataset :math:`\mathbf{x}^{sim}` from the simulator-based model :math:`\mathcal{M}(\theta)`.
-        -  Accept the parameter value :math:`\theta` if :math:`\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}) < \epsilon`. Otherwise, reject :math:`\theta`.
+        -  Accept the parameter value :math:`\theta` if :math:`\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}) < \gamma`. Otherwise, reject :math:`\theta`.
         
         .. image:: img/ABC_rejection.png
         
-        Here, the metric on the dataspace :math:`\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})` measures the closeness between :math:`\mathbf{x}^{sim}` and :math:`\mathbf{x}^{obs}`. The accepted :math:`(\theta,\mathbf{x}^{sim})` pairs are thus jointly sampled from a distribution proportional to :math:`\pi(\theta)p_{\mathbf{d},\epsilon}(\mathbf{x}^{obs}|\theta)`, where :math:`p_{\mathbf{d},\epsilon}(\mathbf{x}^{obs}|\theta)` is an approximation to the intractable likelihood function :math:`p(\mathbf{x}^{obs}|\theta)`
+        Here, the metric on the dataspace :math:`\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})` measures the closeness between :math:`\mathbf{x}^{sim}` and :math:`\mathbf{x}^{obs}`. The accepted :math:`(\theta,\mathbf{x}^{sim})` pairs are thus jointly sampled from a distribution proportional to :math:`\pi(\theta)p_{\mathbf{d},\gamma}(\mathbf{x}^{obs}|\theta)`, where :math:`p_{\mathbf{d},\gamma}(\mathbf{x}^{obs}|\theta)` is an approximation to the intractable likelihood function :math:`p(\mathbf{x}^{obs}|\theta)`
         
         	
 
-        .. centered:: :math:`p_{\mathbf{d}, \epsilon}(\mathbf{x}^{obs}|\theta) = \int p(\mathbf{x}^{sim}|\theta) \mathbb{K}_{\epsilon}(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}))  d\mathbf{x}^{sim}` 
+        .. centered:: :math:`p_{\mathbf{d}, \gamma}(\mathbf{x}^{obs}|\theta) = \int p(\mathbf{x}^{sim}|\theta) \mathbb{K}_{\gamma}(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs}))  d\mathbf{x}^{sim}`
         
-        proportional to :math:`P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\epsilon)`. In general, :math:`\mathbb{K}_{\epsilon}(\cdot)` needs to be a probability density function with a large concentration of mass near 0, in which the parameter :math:`\epsilon` denotes the amount of concentration (the smaller :math:`\epsilon`, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when :math:`\epsilon \to 0`. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High Performance Computing in `ABCpy <https://github.com/eth-cscs/abcpy>`_.
+        proportional to :math:`P(\mathbf{d}(\mathbf{x}^{sim},\mathbf{x}^{obs})\leq\gamma)`. In general, :math:`\mathbb{K}_{\gamma}(\cdot)` needs to be a probability density function with a large concentration of mass near 0, in which the parameter :math:`\gamma` denotes the amount of concentration (the smaller :math:`\gamma`, the more concentrated the density is). This guarantees that, in principle, the above approximate likelihood converges to the true one when :math:`\gamma \to 0`. Of course, decreasing the threshold increases the computational cost, as less simulations will be accepted. This is mitigated by efficient ABC algorithms in conjuction with High Performance Computing in `ABCpy <https://github.com/eth-cscs/abcpy>`_.
         
     .. TODO: discuss that the likelihood is actually a delta function as the model is deterministic/where does uncertainty come from?
     .. TODO: add priors?
