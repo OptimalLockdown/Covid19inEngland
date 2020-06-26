@@ -13,7 +13,7 @@ General Questions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 “Optimal Lockdown” is a project conducted by researchers at the universities of Warwick, Oxford and Nottingham. It has three phases.
 
-In the first phase - visible as of 20th April 2020 on this website - we have developed an **epidemic model to understand the spread of COVID-19 in England**. This model is tailored to the English situation and calibrated with approximate Bayesian computation (ABC). The model has been developed by Lorenzo Pacchiardi (Dept. of Statistics, University of Oxford) and `Dr. Ritabrata Dutta <https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/dutta/>`_ (Dept. of Statistics, University of Warwick).
+In the first phase - visible as of mid June 2020 on this website - we have developed an **epidemic model to understand the spread of COVID-19 in England**. This model is tailored to the situation of England and calibrated with approximate Bayesian computation (ABC). The model has been developed by Lorenzo Pacchiardi (Dept. of Statistics, University of Oxford) and `Dr. Ritabrata Dutta <https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/dutta/>`_ (Dept. of Statistics, University of Warwick).
 
 In the second phase, this model will be improved by integrating data about commuting patterns in England. 
 
@@ -78,7 +78,7 @@ Of course we are **not** sure it is correct; nobody can predict the future and, 
 4. What do we mean by uncertainty in this model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The uncertainty of our prediction is the orange shaded area in each graph, which means that the actual value (e.g. of daily deaths) will be within the orange range with 95 percent probability. 
+The uncertainty of our prediction is the orange shaded area in each graph, which means that the actual value (e.g. of daily deaths) will be within the orange range with 99% probability.
 The uncertainty is due to the fact that in this model we do not estimate the exact values of the parameters of the model (e.g. how many days it takes for a person to start showing symptoms once infected, or how many days between being diagnosed and death). Instead we estimate the probabilities of different possible values being the correct one. This is a central element of the Bayesian paradigm of statistics. 
 
 This uncertainty can be thought of as arising due to our inability to describe the reality perfectly by our (deterministic) model, for any choice of the values of the parameters; this is called a misspecified model. Therefore, there could be several choices of the values of the parameters which approximate the truth in a similar way.
