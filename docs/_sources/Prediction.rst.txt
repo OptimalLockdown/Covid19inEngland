@@ -1,6 +1,6 @@
 .. _Prediction:
 
-Inference results for England (Updated on 23rd May)
+Inference/Prediction for England (23rd May)
 ===================================================
 
 
